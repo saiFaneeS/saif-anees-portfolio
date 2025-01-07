@@ -65,7 +65,7 @@ export const TrustIndicators = () => {
               className="h-5 w-5 object-cover rounded-full"
             />
           )}
-          {/* {testimonials[currentIndex]?.author === "Violet Clough" && ( */}
+          {testimonials[currentIndex]?.author === "Violet Clough" && (
             <div className="bg-violet-600 p-[2px] rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export const TrustIndicators = () => {
                 <path d="M12 20c5.5 0 10-4.5 10-10-5.5 0-10 4.5-10 10" />
               </svg>{" "}
             </div>
-          {/* )} */}
+          )}
           {testimonials[currentIndex]?.author}
         </span>
       </motion.div>
