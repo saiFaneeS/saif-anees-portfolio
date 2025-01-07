@@ -153,20 +153,16 @@ export default function Hero() {
                 text: "Years of Solid Experience as a Developer.",
                 icon: Hammer,
               },
-              {
-                text: "Contract Works with Companies Across the Globe.",
-                icon: Briefcase,
-              },
             ].map((item, index) => (
               <CarouselItem
                 key={index}
-                className="basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 pl-0"
+                className="basis-full sm:basis-1/2 md:basis-1/2 lg:basis-1/3 pl-0 max-sm:mb-1.5"
               >
                 <div
                   className="p-4 border-r flex flex-col"
                   style={{ userSelect: "none" }}
                 >
-                  <div className="flex items-center mb-2 max-sm:bg-gradient-to-r from-emerald-100 to-transparent rounded max-sm:p-2">
+                  <div className="flex items-center mb-2 max-sm:bg-gradient-to-r from-emerald-100 to-transparent max-sm:py-4 max-sm:px-3">
                     <item.icon size={20} className="mr-2" />{" "}
                     {/* Changed to use Lucide icons */}
                     <h4 className="font-medium text-base hover:cursor-grab">
@@ -174,9 +170,7 @@ export default function Hero() {
                         ? "5+ Satisfied Clients"
                         : index === 1
                         ? "Expertise in Design"
-                        : index === 2
-                        ? "2+ Years of Experience"
-                        : "Global Impact"}
+                        : "2+ Years of Experience"}
                     </h4>
                   </div>
                   <p className="text-sm text-gray-600 max-sm:hidden">
