@@ -79,7 +79,7 @@ export default function Hero() {
 
       <div className="absolute flex justify-center items-center max-sm:right-5 right-12 bottom-4 z-20">
         <svg
-          className="w-[100px] h-[100px] animate-rotate rounded-full"
+          className="w-[90px] h-[90px] animate-rotate rounded-full"
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -89,9 +89,13 @@ export default function Hero() {
               d="M100,100 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0"
             />
           </defs>
-          <text className="text-[24px] font-medium" textLength="565">
+          <text
+            className="text-[20px] font-semibold text-neutral-800"
+            textLength="565"
+            dominantBaseline="middle"
+          >
             <textPath href="#circlePath">
-              {"GET IN TOUCH ・ GET IN TOUCH ・ GET IN TOUCH ・"}
+              {"GET IN TOUCH ・ GET IN TOUCH ・ "}
             </textPath>
           </text>
         </svg>
@@ -116,7 +120,7 @@ export default function Hero() {
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="w-full cursor-grab mb-2">
+          <CarouselContent className="w-full cursor-grab">
             {[
               {
                 text: "Satisfied Clients with Positive Feedbacks.",
