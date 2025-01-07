@@ -90,7 +90,7 @@ export default function Hero() {
             />
           </defs>
           <text
-            className="text-[20px] font-semibold text-neutral-800"
+            className="text-[20px] font-medium text-black"
             textLength="565"
             dominantBaseline="middle"
           >
