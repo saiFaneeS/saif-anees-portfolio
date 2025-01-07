@@ -77,32 +77,9 @@ export default function Hero() {
         </Link>
       </div>
 
-      {/* spinner */}
-      {/* <div className="absolute z-30 right-12 max-lg:right-4 max-md:right-0 max-sm:-right-2 bottom-0 h-44 max-sm:h-32 w-44 max-sm:w-36">
-        <div className="h-16 brightness-50 rounded-full max-sm:h-12 w-16 max-sm:w-12 object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
-          <Image
-            src={"/circular-name-img.png"}
-            height={500}
-            width={500}
-            className="h-16 max-sm:h-12 w-16 max-sm:w-12 object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-          />
-        </div>
-        <Link
-          href="mailto:saifanees11@gmail.com"
-          className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white"
-        >
-          <Mail className="lg:h-8 lg:w-8" />
-        </Link>
-        <Image
-          src={"/circular-name.png"}
-          height={500}
-          width={500}
-          className="h-full w-full object-contain animate-rotate"
-        />
-      </div> */}
       <div className="absolute flex justify-center items-center max-sm:right-5 right-12 bottom-4 z-20">
         <svg
-          className="w-[100px] h-[100px] animate-rotate rounded-full m-2"
+          className="w-[100px] h-[100px] animate-rotate rounded-full"
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -139,7 +116,7 @@ export default function Hero() {
           onMouseEnter={plugin.current.stop}
           onMouseLeave={plugin.current.reset}
         >
-          <CarouselContent className="w-full cursor-grab mb-4">
+          <CarouselContent className="w-full cursor-grab mb-2">
             {[
               {
                 text: "Satisfied Clients with Positive Feedbacks.",

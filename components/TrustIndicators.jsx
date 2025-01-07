@@ -5,17 +5,17 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "Great experience working with a true and creative talent.",
+    text: "“Great experience working with a true and creative talent.”",
     author: "Tami Ross, Ohghad CEO",
     logo: "/ohghad.png",
   },
   {
-    text: "The work looks amazing. It reminds me of the quality and functionality of Goodreads.",
+    text: "“The work looks amazing. It reminds me of the quality and functionality of Goodreads.”",
     author: "Violet Clough",
     logo: "/flower-lotus.png",
   },
   {
-    text: "Professional, timely, and delivered outstanding designs.",
+    text: "“Professional, timely, and delivered outstanding designs.”",
     author: "Igal S.",
     logo: "/idan.png",
   },
@@ -46,10 +46,7 @@ export const TrustIndicators = () => {
         exit={{ opacity: 0, y: -20 }}
         className="text-sm max-md:text-sm font-medium flex gap-2 items-start flex-wrap max-sm:flex-col"
       >
-        <span className="sm:mr-2">
-          {"“"}
-          {testimonials[currentIndex]?.text} {"”"}
-        </span>
+        <span className="sm:mr-2">{testimonials[currentIndex]?.text}</span>
 
         <span className="text-sm text-white-100/60  flex gap-2 items-center">
           —{" "}
