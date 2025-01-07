@@ -5,6 +5,8 @@ import {
   ArrowUpRightFromCircle,
   Book,
   Briefcase,
+  BriefcaseBusiness,
+  Dribbble,
   Globe,
   Hammer,
   Handshake,
@@ -128,11 +130,11 @@ export default function Hero() {
               },
               {
                 text: "I approach for a consistent design from concept to launch.",
-                icon: ThumbsUp,
+                icon: Dribbble,
               },
               {
                 text: "Years of Solid Experience as a Developer.",
-                icon: Hammer,
+                icon: BriefcaseBusiness,
               },
             ].map((item, index) => (
               <CarouselItem
@@ -144,7 +146,7 @@ export default function Hero() {
                   style={{ userSelect: "none" }}
                 >
                   <div className="flex items-center mb-2 max-sm:bg-gradient-to-r from-emerald-100 to-transparent max-sm:py-4 max-sm:px-3">
-                    <item.icon size={20} className="mr-2" />{" "}
+                    <item.icon size={20} strokeWidth={1.7} className="mr-2" />{" "}
                     {/* Changed to use Lucide icons */}
                     <h4 className="font-medium text-base hover:cursor-grab">
                       {index === 0
