@@ -44,10 +44,10 @@ export default function Hero() {
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-extrabold leading-none">
+      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none">
         <div className="">
           <h1
-            className={`leading-none font-medium flex break-words justify-start items-center text-left text-slide-in-bottom`}
+            className={`leading-none font-semibold flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
             ALL
             <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-slate-950"></div>
