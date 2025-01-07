@@ -33,7 +33,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center max-sm:flex-col gap-2 text-white-100/90 lg:bg-white lg:shadow lg:py-1 lg:px-4 rounded-full">
+    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 lg:bg-white lg:shadow lg:py-1 lg:px-4 rounded-full">
       <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
@@ -44,7 +44,7 @@ export const TrustIndicators = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        className="text-sm max-md:text-sm font-medium max-sm:text-center flex gap-2 items-center max-sm:justify-center flex-wrap"
+        className="text-sm max-md:text-sm font-medium flex gap-2 items-start flex-wrap max-sm:flex-col"
       >
         <span className="sm:mr-2">{testimonials[currentIndex]?.text}</span>
         <span className="text-sm text-white-100/60  flex gap-2 items-center">

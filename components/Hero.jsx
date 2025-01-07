@@ -40,19 +40,19 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-5 overflow-x-hidden px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-40 absolute w-full ${
+      className={`h-screen text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-5 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-40 absolute w-full ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
       <div className="text-6xl w-full max-sm:text-4xl pr-4 font-extrabold leading-none">
-        <div className="overflow-y-hidden">
+        <div className="">
           <h1
-            className={`leading-none font-medium flex flex-wrap break-words justify-start items-center text-left text-slide-in-bottom`}
+            className={`leading-none font-medium flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
             ALL
-            <div className="min-w-4 lg:max-w-20 flex-1 mx-4 h-2 max-sm:h-1 inline-block bg-slate-950"></div>
+            <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-slate-950"></div>
             IN
-            <div className="min-w-4 lg:max-w-20 flex-1 mx-4 h-2 max-sm:h-1 inline-block bg-slate-950"></div>
+            <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-slate-950"></div>
             ONE
           </h1>
         </div>
@@ -63,11 +63,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="flex w-full gap-6 max-md:justify-center items-center">
+      <div className="flex w-full gap-6">
         <TrustIndicators />
       </div>
 
-      <div className="flex w-full gap-6 max-md:justify-center items-center">
+      <div className="flex w-full gap-6 items-center">
         <Link
           href={"/works"}
           className="flex gap-2 items-center text-base font-medium hover:underline"
@@ -78,7 +78,7 @@ export default function Hero() {
       </div>
 
       {/* spinner */}
-      <div className="absolute z-30 right-12 max-lg:right-4 max-md:right-0 max-sm:-right-2 bottom-0 h-44 max-sm:h-32 w-44 max-sm:w-36">
+      {/* <div className="absolute z-30 right-12 max-lg:right-4 max-md:right-0 max-sm:-right-2 bottom-0 h-44 max-sm:h-32 w-44 max-sm:w-36">
         <div className="h-16 brightness-50 rounded-full max-sm:h-12 w-16 max-sm:w-12 object-contain absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden">
           <Image
             src={"/circular-name-img.png"}
@@ -99,6 +99,32 @@ export default function Hero() {
           width={500}
           className="h-full w-full object-contain animate-rotate"
         />
+      </div> */}
+      <div className="absolute flex justify-center items-center max-sm:right-5 right-12 bottom-4 z-20">
+        <svg
+          className="w-[100px] h-[100px] animate-rotate rounded-full m-2"
+          viewBox="0 0 200 200"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <path
+              id="circlePath"
+              d="M100,100 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0"
+            />
+          </defs>
+          <text className="text-[24px] font-medium" textLength="565">
+            <textPath href="#circlePath">
+              {"GET IN TOUCH ・ GET IN TOUCH ・ GET IN TOUCH ・"}
+            </textPath>
+          </text>
+        </svg>
+
+        <Link
+          href="mailto:saifanees11@gmail.com"
+          className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-200 hover:bg-amber-400 rounded-full p-4"
+        >
+          <Mail className="h-7 w-7" strokeWidth={1.2} />
+        </Link>
       </div>
 
       {/* slider */}
