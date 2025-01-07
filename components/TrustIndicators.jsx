@@ -12,6 +12,7 @@ const testimonials = [
   {
     text: "The work looks amazing. It reminds me of the quality and functionality of Goodreads.",
     author: "Violet Clough",
+    logo: "/flower-lotus.png",
   },
   {
     text: "Professional, timely, and delivered outstanding designs.",
