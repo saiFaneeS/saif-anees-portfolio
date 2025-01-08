@@ -17,7 +17,7 @@ const Slider = () => {
             className="flex gap-10 sm:animate-scroll whitespace-nowrap"
           >
             <div className="flex gap-2">
-              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-neutral-300/70 overflow-hidden">
+              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-neutral-300/50 overflow-hidden">
                 {images.map((el) => {
                   return (
                     <>
