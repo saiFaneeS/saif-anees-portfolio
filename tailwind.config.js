@@ -80,7 +80,13 @@ module.exports = {
       keyframes: {
         scroll: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" }, // Scroll to the left
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "snap-loop": {
+          "0%, 12.5%": { transform: "translateX(50%)" }, // Image 1 stays
+          "33.33%, 45.83%": { transform: "translateX(-55%)" }, // Image 2 stays
+          "66.66%, 79.16%": { transform: "translateX(-160%)" }, // Image 3 stays
+          "100%": { transform: "translateX(50%)" }, // Loop back to Image 1
         },
         "accordion-down": {
           from: { height: "0" },
@@ -92,8 +98,10 @@ module.exports = {
         },
       },
       animation: {
-        scroll: "scroll 20s linear infinite", // 20s duration, adjust as needed
-        rotate: "spin 10s linear infinite", // Continuous rotation
+        scroll: "scroll 20s linear infinite",
+        "scroll-faster": "scroll 20s linear infinite",
+        "snap-loop": "snap-loop 6s ease-in-out infinite", // Adjust duration
+        rotate: "spin 10s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

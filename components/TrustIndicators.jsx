@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "“Great experience working with a true and creative talent.”",
+    text: "“This was a great experience working with true talent that can read between the lines and be creative as well as listen to incorporate required details.”",
     author: "Tami Ross, Ohghad CEO",
     logo: "/ohghad.png",
   },
@@ -15,7 +15,7 @@ const testimonials = [
     logo: "/flower-lotus.png",
   },
   {
-    text: "“Professional, timely, and delivered outstanding designs.”",
+    text: "“Completed the work within the agreed-upon timeline, showing professionalism and reliability in meeting deadlines. He was receptive to feedback and collaborated effectively to refine the designs according to my preferences.”",
     author: "Igal S.",
     logo: "/idan.png",
   },
@@ -33,7 +33,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 ">
+    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 sm:max-w-5xl">
       <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
@@ -44,17 +44,19 @@ export const TrustIndicators = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
-        className="text-sm max-md:text-sm font-medium flex gap-2 items-start flex-wrap max-sm:flex-col"
+        className="text-base md:text-sm font-medium flex gap-2 max-sm:items-start items-center max-lg:flex-wrap max-sm:flex-col"
       >
-        <span className="sm:mr-2">{testimonials[currentIndex]?.text}</span>
+        <span className="line-clamp-1 max-sm:line-clamp-3">
+          {testimonials[currentIndex]?.text}
+        </span>
 
-        <span className="text-sm text-white-100/60  flex gap-2 items-center">
+        <span className="text-sm text-white-100/60 flex gap-2 items-center grayscale text-nowrap">
           {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
             <Image
               src={testimonials[currentIndex]?.logo}
               height={100}
               width={100}
-              className="h-5 w-5 object-contain rounded-full"
+              className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75"
             />
           )}
           {testimonials[currentIndex]?.author === "Igal S." && (
