@@ -84,8 +84,8 @@ module.exports = {
         },
         "snap-loop": {
           "0%, 12.5%": { transform: "translateX(50%)" }, // Image 1 stays
-          "33.33%, 45.83%": { transform: "translateX(-55%)" }, // Image 2 stays
-          "66.66%, 79.16%": { transform: "translateX(-160%)" }, // Image 3 stays
+          "33.33%, 45.83%": { transform: "translateX(-57%)" }, // Image 2 stays
+          "66.66%, 79.16%": { transform: "translateX(-164%)" }, // Image 3 stays
           "100%": { transform: "translateX(50%)" }, // Loop back to Image 1
         },
         "accordion-down": {
