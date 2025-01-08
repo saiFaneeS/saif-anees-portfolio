@@ -49,7 +49,6 @@ export const TrustIndicators = () => {
         <span className="sm:mr-2">{testimonials[currentIndex]?.text}</span>
 
         <span className="text-sm text-white-100/60  flex gap-2 items-center">
-          —{" "}
           {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
             <Image
               src={testimonials[currentIndex]?.logo}

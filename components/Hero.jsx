@@ -43,7 +43,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-5 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-40 absolute w-full lg:overflow-hidden lg:h-screen ${
+      className={`h-screen text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-5 max-sm:gap-0 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-40 absolute w-full lg:overflow-hidden lg:h-screen ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >

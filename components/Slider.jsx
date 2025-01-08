@@ -1,4 +1,5 @@
 import { ArrowRight, Mail } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -8,10 +9,31 @@ const Slider = () => {
       {/* Slider Wrapper */}
       <div className="flex gap-10 animate-scroll whitespace-nowrap">
         <div className="flex gap-4">
-          <div className="h-24 w-56 rounded-md flex items-center justify-center gap-4 bg-neutral-300/80 overflow-hidden">
-            <div className="animate-scroll whitespace-nowrap bg-neutral-400/80 h-20 aspect-video rounded"></div>
-            <div className="animate-scroll whitespace-nowrap bg-neutral-400/80 h-20 aspect-video rounded"></div>
-            <div className="animate-scroll whitespace-nowrap bg-neutral-400/80 h-20 aspect-video rounded"></div>
+          <div className="h-24 w-56 rounded-md flex items-center justify-center gap-4 bg-neutral-300/70 overflow-hidden">
+            <div className="animate-scroll whitespace-nowrap  h-20 aspect-video">
+              <Image
+                src={"/ohghad-web.png"}
+                height={200}
+                width={200}
+                className="h-full w-full object-cover rounded-md shadow-md"
+              />
+            </div>
+            <div className="animate-scroll whitespace-nowrap  h-20 aspect-video">
+              <Image
+                src={"/msre.png"}
+                height={200}
+                width={200}
+                className="h-full w-full object-cover rounded-md shadow-md"
+              />
+            </div>
+            <div className="animate-scroll whitespace-nowrap  h-20 aspect-video">
+              <Image
+                src={"/mslm.webp"}
+                height={200}
+                width={200}
+                className="h-full w-full object-cover rounded-md shadow-md"
+              />
+            </div>
           </div>
           <div className="flex flex-col items-center justify-center">
             <h4 className="text-base font-medium leading-none mb-4">
@@ -27,12 +49,24 @@ const Slider = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80">
-          <span className="border rounded-sm p-[1px] px-3">Apps</span>
-          <span className="border rounded-sm p-[1px] px-3">Websites</span>
-          <span className="border rounded-sm p-[1px] px-3">Design</span>
-          <span className="border rounded-sm p-[1px] px-3">User Interface</span>
-          <span className="border rounded-sm p-[1px] px-3">Animation</span>
-          <span className="border rounded-sm p-[1px] px-3">& More</span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Apps
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Websites
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Design
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            User Interface
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Animation
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            & More
+          </span>
         </div>
 
         <div className="relative flex justify-center items-center z-20">
@@ -69,10 +103,31 @@ const Slider = () => {
       {/* Slider Wrapper */}
       <div className="flex gap-10 animate-scroll whitespace-nowrap">
         <div className="flex gap-4">
-          <div className="h-24 w-56 rounded-md flex items-center justify-center gap-4 bg-neutral-300/80 overflow-hidden">
-            <div className="animate-scroll whitespace-nowrap bg-neutral-400/80 h-20 aspect-video rounded"></div>
-            <div className="animate-scroll whitespace-nowrap bg-neutral-400/80 h-20 aspect-video rounded"></div>
-            <div className="animate-scroll whitespace-nowrap bg-neutral-400/80 h-20 aspect-video rounded"></div>
+          <div className="h-24 w-56 rounded-md flex items-center justify-center gap-4 bg-neutral-300/70 overflow-hidden">
+            <div className="animate-scroll whitespace-nowrap  h-20 aspect-video">
+              <Image
+                src={"/ohghad-web.png"}
+                height={200}
+                width={200}
+                className="h-full w-full object-cover rounded-md shadow-md"
+              />
+            </div>
+            <div className="animate-scroll whitespace-nowrap  h-20 aspect-video">
+              <Image
+                src={"/msre.png"}
+                height={200}
+                width={200}
+                className="h-full w-full object-cover rounded-md shadow-md"
+              />
+            </div>
+            <div className="animate-scroll whitespace-nowrap  h-20 aspect-video">
+              <Image
+                src={"/mslm.webp"}
+                height={200}
+                width={200}
+                className="h-full w-full object-cover rounded-md shadow-md"
+              />
+            </div>
           </div>
           <div className="flex flex-col items-center justify-center">
             <h4 className="text-base font-medium leading-none mb-4">
@@ -88,12 +143,24 @@ const Slider = () => {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80">
-          <span className="border rounded-sm p-[1px] px-3">Apps</span>
-          <span className="border rounded-sm p-[1px] px-3">Websites</span>
-          <span className="border rounded-sm p-[1px] px-3">Design</span>
-          <span className="border rounded-sm p-[1px] px-3">User Interface</span>
-          <span className="border rounded-sm p-[1px] px-3">Animation</span>
-          <span className="border rounded-sm p-[1px] px-3">& More</span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Apps
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Websites
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Design
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            User Interface
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            Animation
+          </span>
+          <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+            & More
+          </span>
         </div>
 
         <div className="relative flex justify-center items-center z-20">
