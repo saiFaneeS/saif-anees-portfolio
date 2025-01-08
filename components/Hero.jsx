@@ -25,6 +25,7 @@ import emblaCarouselAutoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import { TrustIndicators } from "./TrustIndicators";
+import Slider from "./Slider";
 
 export default function Hero() {
   const { isActive, pageChanged, setPageChanged } = useNavbar();
@@ -42,7 +43,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-5 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-40 absolute w-full ${
+      className={`h-screen text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-5 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-40 absolute w-full lg:overflow-hidden lg:h-screen ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
@@ -69,7 +70,7 @@ export default function Hero() {
         <TrustIndicators />
       </div>
 
-      <div className="flex w-full gap-6 items-center">
+      {/* <div className="flex w-full gap-6 items-center">
         <Link
           href={"/works"}
           className="flex gap-2 items-center text-base font-medium hover:underline"
@@ -77,41 +78,10 @@ export default function Hero() {
           <ArrowUpRightFromCircle size={18} strokeWidth={2.4} />
           See My Projects
         </Link>
-      </div>
-
-      <div className="absolute flex justify-center items-center max-sm:right-5 right-12 bottom-4 z-20">
-        <svg
-          className="w-[90px] h-[90px] animate-rotate rounded-full"
-          viewBox="0 0 200 200"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <path
-              id="circlePath"
-              d="M100,100 m-90,0 a90,90 0 1,1 180,0 a90,90 0 1,1 -180,0"
-            />
-          </defs>
-          <text
-            className="text-[20px] font-medium text-black"
-            textLength="565"
-            dominantBaseline="middle"
-          >
-            <textPath href="#circlePath">
-              {"GET IN TOUCH ・ GET IN TOUCH ・ "}
-            </textPath>
-          </text>
-        </svg>
-
-        <Link
-          href="mailto:saifanees11@gmail.com"
-          className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-200 hover:bg-amber-400 rounded-full p-4"
-        >
-          <Mail className="h-7 w-7" strokeWidth={1.2} />
-        </Link>
-      </div>
+      </div> */}
 
       {/* slider */}
-      <div className="relative w-full">
+      {/* <div className="relative w-full">
         <Carousel
           className="w-full"
           opts={{
@@ -147,7 +117,6 @@ export default function Hero() {
                 >
                   <div className="flex items-center mb-2 max-sm:bg-gradient-to-r from-emerald-100 to-transparent max-sm:py-4 max-sm:px-3">
                     <item.icon size={20} strokeWidth={1.7} className="mr-2" />{" "}
-                    {/* Changed to use Lucide icons */}
                     <h4 className="font-medium text-base hover:cursor-grab">
                       {index === 0
                         ? "5+ Satisfied Clients"
@@ -159,14 +128,15 @@ export default function Hero() {
                   <p className="text-sm text-gray-600 max-sm:hidden">
                     {item.text}
                   </p>{" "}
-                  {/* Updated to use item.text */}
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
         <div className="absolute inset-y-0 right-0 w-1/5 max-sm:w-1/2 bg-gradient-to-r from-transparent to-gray-100/50 z-10 pointer-events-none"></div>
-      </div>
+      </div> */}
+
+      <Slider />
     </div>
   );
 }
