@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <div
-      className={`min-h-screen overflow-x-hidden overflow-y-auto relative flex flex-col justify-center gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 pt-40 max-sm:py-16 ${
+      className={`min-h-screen overflow-x-hidden overflow-y-auto relative flex flex-col justify-center gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 pt-40 max-sm:pt-28 max-sm:py-16 ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
@@ -58,7 +58,7 @@ const About = () => {
               <h3 className="text-lg font-semibold text-gray-900">
                 {section.category}
               </h3>
-              <div className="grid grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 gap-4 gap-y-5">
+              <div className="grid grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 gap-4 gap-y-5 saturate-[70%]">
                 {section.items.map((tool, toolIndex) => (
                   <div
                     key={toolIndex}

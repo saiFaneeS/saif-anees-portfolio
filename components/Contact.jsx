@@ -52,15 +52,15 @@ const Contact = () => {
 
           <div>
             <p className="text-sm font-semibold text-gray-500 mb-4 tracking-wider">SOCIAL MEDIA</p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-2">
               {socialLinks.map((link, index) => (
                 <Link
                   key={index}
                   target="_blank"
                   href={link.url}
-                  className="group flex items-center gap-3 p-4 rounded-lg hover:bg-emerald-950 hover:text-emerald-100 transition-all"
+                  className="group flex items-center gap-3 p-4 rounded-md hover:bg-emerald-950 hover:text-emerald-100 transition-all"
                 >
-                  <span className="text-gray-400 group-hover:text-emerald-100 transition-colors">
+                  <span className="text-gray-900 group-hover:text-emerald-100 transition-colors">
                     {link.icon}
                   </span>
                   <span className="font-medium group-hover:translate-x-1 transition-transform">
