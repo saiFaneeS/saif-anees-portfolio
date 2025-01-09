@@ -79,8 +79,8 @@ module.exports = {
       },
       keyframes: {
         scroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-100%)" },
+          "0%": { transform: "translateX(10%)" },
+          "100%": { transform: "translateX(-110%)" },
         },
         "snap-loop": {
           "0%, 12.5%": { transform: "translateX(50%)" }, // Image 1 stays
@@ -98,7 +98,7 @@ module.exports = {
         },
       },
       animation: {
-        scroll: "scroll 20s linear infinite",
+        scroll: "scroll 25s linear infinite",
         "scroll-faster": "scroll 20s linear infinite",
         "snap-loop": "snap-loop 6s ease-in-out infinite", // Adjust duration
         rotate: "spin 10s linear infinite",
