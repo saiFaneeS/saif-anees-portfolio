@@ -37,7 +37,7 @@ export default function Hero() {
           User Interface
         </span>
         <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Animation
+          Video
         </span>
         <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
           Apps & Websites
@@ -49,7 +49,7 @@ export default function Hero() {
           User Interface
         </span>
         <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Animation
+          Video
         </span>
         <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
           Apps & Websites
@@ -61,7 +61,7 @@ export default function Hero() {
           User Interface
         </span>
         <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Animation
+          Video
         </span>
       </div>
       <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none">
