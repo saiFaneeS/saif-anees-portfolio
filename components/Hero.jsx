@@ -26,44 +26,6 @@ export default function Hero() {
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Apps & Websites
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Design
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          User Interface
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Video
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Apps & Websites
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Design
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          User Interface
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Video
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Apps & Websites
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Design
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          User Interface
-        </span>
-        <span className="border rounded-full p-[1px] px-5 bg-neutral-50/70 text-nowrap">
-          Video
-        </span>
-      </div>
       <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none">
         <div className="">
           <h1
@@ -88,6 +50,45 @@ export default function Hero() {
       </div>
 
       <Slider />
+
+      <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Apps & Websites
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Design
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          User Interface
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Video
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Apps & Websites
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Design
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          User Interface
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Video
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Apps & Websites
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Design
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          User Interface
+        </span>
+        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+          Video
+        </span>
+      </div>
     </div>
   );
 }

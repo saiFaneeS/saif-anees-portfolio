@@ -27,7 +27,7 @@ export const TrustIndicators = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(timer);
   }, []);
