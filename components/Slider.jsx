@@ -63,22 +63,22 @@ const Slider = () => {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80 max-sm:hidden">
-              <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
                 Apps
               </span>
-              <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
                 Websites
               </span>
-              <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
                 Design
               </span>
-              <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
                 User Interface
               </span>
-              <span className="border rounded-sm p-[1px] px-3 bg-neutral-50/70">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
                 Animation
               </span>
-              <span className="border rounded-sm p-[1px] px-3 bg-amber-100">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-amber-600/15 rounded-full">
                 & More
               </span>
             </div>
@@ -108,7 +108,7 @@ const Slider = () => {
 
               <Link
                 href="mailto:saifanees11@gmail.com"
-                className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-200 hover:bg-amber-400 rounded-full p-4"
+                className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-200 hover:bg-amber-300 rounded-full p-4"
               >
                 <Mail className="h-7 w-7" strokeWidth={1.2} />
               </Link>
