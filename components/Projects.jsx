@@ -147,7 +147,7 @@ const Projects = () => {
           <p className="text-neutral-800 text-sm line-clamp-1 mb-4">
             {projects[currentProjectIndex]?.description}
           </p>
-          <div className="flex flex-wrap gap-2 max-sm:hidden">
+          <div className="flex flex-wrap gap-2">
             {projects[currentProjectIndex]?.tags.map((tag, index) => (
               <span
                 key={index}
@@ -159,6 +159,8 @@ const Projects = () => {
           </div>
         </div>
       </div>
+
+      <div className="h-[1px] w-full bg-neutral-900/15"></div>
 
       <div className="flex flex-col w-full">
         <div className="flex gap-6 justify-between items-center mb-6">
