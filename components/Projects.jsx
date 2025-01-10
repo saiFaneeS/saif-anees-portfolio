@@ -90,7 +90,7 @@ const Projects = () => {
 
   return (
     <div
-      className={`min-h-screen flex max-md:flex-col justify-center items-end max-md:items-start gap-12 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-16 max-sm:pt-20 relative w-full 
+      className={`min-h-screen flex max-md:flex-col justify-center items-end max-md:items-start gap-12 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full 
       ${isActive ? "slide-out-top" : "slide-in-bottom"}
       ${pageChanged ? "hidden" : ""}`}
     >
@@ -107,7 +107,7 @@ const Projects = () => {
               isImageLoaded ? "scale-100 opacity-100" : "scale-110 opacity-0"
             }`}
           />
-          <div className="absolute bottom-4 left-4 z-20 flex gap-2 items-center">
+          <div className="absolute bottom-4 left-4 z-20 flex gap-2 items-center flex-wrap">
             {projects[currentProjectIndex]?.url && (
               <Link
                 href={projects[currentProjectIndex]?.url}
@@ -160,7 +160,7 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="h-[1px] w-full bg-neutral-900/15"></div>
+      <div className="h-[1px] w-full bg-neutral-900/15 sm:hidden"></div>
 
       <div className="flex flex-col w-full">
         <div className="flex gap-6 justify-between items-center mb-6">
