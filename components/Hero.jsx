@@ -62,7 +62,7 @@ export default function Hero() {
           User Interface
         </span>
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
-          Video
+          Video Editing
         </span>
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
           Apps & Websites
@@ -74,7 +74,7 @@ export default function Hero() {
           User Interface
         </span>
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
-          Video
+          Video Editing
         </span>
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
           Apps & Websites
@@ -86,7 +86,7 @@ export default function Hero() {
           User Interface
         </span>
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
-          Video
+          Video Editing
         </span>
       </div>
     </div>
