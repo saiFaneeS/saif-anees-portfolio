@@ -301,7 +301,7 @@ const CaseStudy = () => {
   return (
     <>
       <div
-        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-16 max-sm:pt-12 ${
+        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:pb-16 max-sm:pt-8 ${
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >
@@ -358,7 +358,7 @@ const CaseStudy = () => {
           <motion.div
             {...fadeIn}
             transition={{ delay: 0.2 }}
-            className="mt-10 rounded-md overflow-hidden border border-gray-800/50"
+            className="mt-10 rounded-md overflow-hidden"
           >
             <Image
               src={project.projectCover}
