@@ -126,7 +126,6 @@ const Projects = () => {
             {projects[currentProjectIndex]?.slug && (
               <Link
                 href={`/case-study/${projects[currentProjectIndex]?.slug}`}
-                target="_blank"
                 className=""
               >
                 <button className="text-sm group flex items-center gap-2 bg-amber-50/80 hover:bg-amber-50/90 text-amber-900 px-4 py-1.5 rounded-sm font-medium transition-all">

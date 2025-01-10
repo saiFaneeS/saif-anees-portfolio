@@ -301,7 +301,7 @@ const CaseStudy = () => {
   return (
     <>
       <div
-        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:pb-16 max-sm:pt-8 ${
+        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-8 ${
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >
@@ -311,7 +311,7 @@ const CaseStudy = () => {
           animate={{ opacity: 1 }}
           className="pt-24"
         >
-          <nav className="flex items-center gap-2 text-sm">
+          <nav className="flex items-center gap-2 text-sm mb-6">
             <Link
               href="/works"
               className="flex items-center gap-2 text-neutral-600 hover:text-white-100 transition-colors group"
