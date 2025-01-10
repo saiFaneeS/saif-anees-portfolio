@@ -40,13 +40,13 @@ const Navbar = () => {
         {/* <div className="bg-neutral-900 w-full h-4 rounded-full max-md:hidden"></div> */}
         <div className="text-lg font-semibold flex gap-4 items-center justify-center">
           {/* <span>{currentTime}</span> */}
-          <span
-            className="cursor-pointer flex leading-none gap-2 items-center hover:bg-emerald-200/10 border border-emerald-500/0 hover:border-emerald-500/10  hover:bg-opacity-50 p-1 rounded-md transition-all"
+          <div
+            className="cursor-pointer flex leading-none gap-2 hover:bg-emerald-500/10 border border-emerald-500/0 hover:border-emerald-800/10 hover:bg-opacity-50 p-1 rounded transition-all"
             onClick={() => setIsActive(!isActive)}
           >
-            <Menu size={28} />
-            <span className="max-sm:hidden">MENU</span>
-          </span>
+            <Menu size={24} strokeWidth={1.7}/>
+            <p className="max-sm:hidden">MENU</p>
+          </div>
         </div>
       </div>
       <div

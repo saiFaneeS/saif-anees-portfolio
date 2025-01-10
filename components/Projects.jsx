@@ -7,7 +7,6 @@ import { useNavbar } from "@/context/Navbar";
 import {
   ArrowBigDown,
   ArrowBigUp,
-  ArrowUpRight,
   ExternalLink,
   ChevronRight,
 } from "lucide-react";
@@ -118,7 +117,7 @@ const Projects = () => {
                 <button className="text-sm group flex items-center gap-2 bg-white/80 hover:bg-emerald-100/90 text-neutral-800 hover:text-emerald-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                   Visit Site
                   <ExternalLink
-                    size={18}
+                    size={16}
                     className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                   />
                 </button>
@@ -130,10 +129,10 @@ const Projects = () => {
                 target="_blank"
                 className=""
               >
-                <button className="text-sm group flex items-center gap-2 bg-amber-100/80 hover:bg-amber-100/90 text-amber-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                <button className="text-sm group flex items-center gap-2 bg-amber-50/80 hover:bg-amber-50/90 text-amber-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                   Case Study
                   <ExternalLink
-                    size={18}
+                    size={16}
                     className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                   />
                 </button>
@@ -153,7 +152,7 @@ const Projects = () => {
               <span
                 key={index}
                 className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full"
-                >
+              >
                 {tag}
               </span>
             ))}
@@ -191,14 +190,14 @@ const Projects = () => {
             <button
               key={index}
               onClick={() => setCurrentProjectIndex(index)}
-              className={`group flex items-center justify-between w-full p-3 rounded-md transition-all ${
+              className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                 index === currentProjectIndex
                   ? "bg-emerald-950 text-white"
                   : "hover:bg-emerald-100/50"
               }`}
             >
               <div className="text-sm flex items-center gap-4">
-                <span className="text-sm opacity-50">
+                <span className="text-sm opacity-50 font-medium">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="font-medium">{project.name}</span>

@@ -12,7 +12,7 @@ import Image from "next/image";
 export function ImageCarousel({ images }) {
   return (
     <Carousel
-      className="w-full lg:w-1/2 border border-gray-600 rounded-md"
+      className="w-full border border-gray-600 rounded-md"
       opts={{
         loop: true,
       }}
@@ -26,7 +26,7 @@ export function ImageCarousel({ images }) {
                 alt=""
                 height={1000}
                 width={1000}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover rounded"
               />
             </div>
           </CarouselItem>

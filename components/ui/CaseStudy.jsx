@@ -12,6 +12,7 @@ import { motion } from "framer-motion";
 import ContactUs from "@/components/Contact";
 import { useRouter } from "next/router";
 import { ImageCarousel } from "../ImageCarousel";
+import { useNavbar } from "@/context/Navbar";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -22,6 +23,8 @@ const fadeIn = {
 const CaseStudy = () => {
   const [project, setProject] = useState(null);
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
+  const { isActive, pageChanged, setPageChanged } = useNavbar();
 
   const projects = [
     // Ohghad
@@ -111,6 +114,7 @@ const CaseStudy = () => {
       projectTitle: "MS Real Estate Redesign",
       objectives: [
         "Enhance visual appeal and usability",
+        "Integrate Property finder listings of the company agents",
         "Modernize the look and functionality",
       ],
       challenges: [
@@ -279,6 +283,12 @@ const CaseStudy = () => {
   ];
 
   useEffect(() => {
+    setPageChanged(false);
+    // Simulate loading
+    setTimeout(() => setLoading(false), 1000);
+  }, [setPageChanged]);
+
+  useEffect(() => {
     const querySlug = router?.query?.slug;
     const filteredProject = projects.find(
       (project) => project.slug === querySlug
@@ -290,7 +300,11 @@ const CaseStudy = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-16 max-sm:pt-20 ">
+      <div
+        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-16 max-sm:pt-12 ${
+          isActive ? "slide-out-top" : "slide-in-bottom"
+        } ${pageChanged ? "hidden" : ""}`}
+      >
         {/* Hero Section */}
         <motion.header
           initial={{ opacity: 0 }}
@@ -312,7 +326,7 @@ const CaseStudy = () => {
             <span className="text-emerald-600">{project.client.name}</span>
           </nav>
 
-          <motion.div {...fadeIn} className="mt-8 max-w-5xl">
+          <motion.div {...fadeIn} className="mt-4 max-w-5xl">
             <div className="flex flex-wrap gap-3 mb-4">
               {project.platform?.frontend?.map((tech, i) => (
                 <span
@@ -339,29 +353,12 @@ const CaseStudy = () => {
             <p className="text-base text-neutral-800 leading-relaxed mb-6">
               {project.description}
             </p>
-
-            {/* <div className="flex gap-8 text-sm text-gray-400">
-              <div>
-                <span className="block text-gray-500 mb-1">Client</span>
-                <span className="text-white-100">{project.client.name}</span>
-              </div>
-              <div>
-                <span className="block text-gray-500 mb-1">Location</span>
-                <span className="text-white-100">
-                  {project.client.location}
-                </span>
-              </div>
-              <div>
-                <span className="block text-gray-500 mb-1">Year</span>
-                <span className="text-white-100">{project.year}</span>
-              </div>
-            </div> */}
           </motion.div>
 
           <motion.div
             {...fadeIn}
             transition={{ delay: 0.2 }}
-            className="mt-12 rounded-xl overflow-hidden border border-gray-800/50"
+            className="mt-10 rounded-md overflow-hidden border border-gray-800/50"
           >
             <Image
               src={project.projectCover}
@@ -374,83 +371,93 @@ const CaseStudy = () => {
         </motion.header>
 
         {/* Content Sections */}
-        <div className="py-20">
-          {/* <div className="grid grid-cols-5 max-md:grid-cols-1 gap-12"> */}
-          {/* Objectives */}
-          <motion.section {...fadeIn} className="mb-12">
-            {/* <span className="text-main-900 font-mono">01</span> */}
+        <div className="py-12 mb-4">
+          <div className="relative grid grid-cols-2 max-md:grid-cols-1 gap-8">
             <div>
-              <h2 className="text-lg font-semibold mt-2 mb-4">Objectives</h2>
-              <ul className="space-y-4">
-                {project.objectives?.map((objective, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
-                    <span className="text-neutral-800">{objective}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Objectives */}
+              <motion.section {...fadeIn} className="mb-12">
+                {/* <span className="text-main-900 font-mono">01</span> */}
+                <div>
+                  <h2 className="text-lg font-semibold mt-2 mb-4">
+                    Objectives
+                  </h2>
+                  <ul className="space-y-4">
+                    {project.objectives?.map((objective, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span className="text-neutral-800">{objective}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.section>
+              {/* Challenges */}
+              <motion.section {...fadeIn} className="mb-12">
+                <div>
+                  {/* <span className="text-main-900 font-mono">02</span> */}
+                  <h2 className="text-lg font-semibold mt-2 mb-4">
+                    Challenges
+                  </h2>
+                  <ul className="space-y-4">
+                    {project.challenges?.map((challenge, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-neutral-800"
+                      >
+                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span>{challenge}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.section>
+              {/* Solutions */}
+              <motion.section {...fadeIn} className="mb-12">
+                <div>
+                  {/* <span className="text-main-900 font-mono">03</span> */}
+                  <h2 className="text-lg font-semibold mt-2 mb-4">Solutions</h2>
+                  <ul className="space-y-4">
+                    {project.solutions?.map((solution, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-3 text-neutral-800"
+                      >
+                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span>{solution}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.section>
             </div>
-          </motion.section>
-          <div className="h-full w-[1px] bg-neutral-400 shrink-0 max-md:hidden"></div>
-          {/* Challenges */}
-          <motion.section {...fadeIn} className="mb-12">
-            <div>
-              {/* <span className="text-main-900 font-mono">02</span> */}
-              <h2 className="text-lg font-semibold mt-2 mb-4">Challenges</h2>
-              <ul className="space-y-4">
-                {project.challenges?.map((challenge, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-3 text-neutral-800"
-                  >
-                    <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
-                    <span>{challenge}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.section>
-          <div className="h-full w-[1px] bg-neutral-400 shrink-0 max-md:hidden"></div>
-          {/* Solutions */}
-          <motion.section {...fadeIn} className="mb-12">
-            <div>
-              {/* <span className="text-main-900 font-mono">03</span> */}
-              <h2 className="text-lg font-semibold mt-2 mb-4">Solutions</h2>
-              <ul className="space-y-4">
-                {project.solutions?.map((solution, i) => (
-                  <li
-                    key={i}
-                    className="flex items-start gap-3 text-neutral-800"
-                  >
-                    <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
-                    <span>{solution}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </motion.section>
-          {/* </div> */}
 
-          {/* Project Gallery */}
-          {project.projectImages?.length > 1 && (
-            <motion.section {...fadeIn} className="mb-20">
-              <h2 className="text-xl font-semibold mb-8">Project Gallery</h2>
-              <ImageCarousel images={project.projectImages} />
-            </motion.section>
-          )}
+            {/* Project Gallery */}
+            {project.projectImages?.length > 1 && (
+              <motion.section {...fadeIn} className="mb-20 ">
+                <h2 className="text-lg font-semibold mb-6">Project Gallery</h2>
+                <ImageCarousel images={project.projectImages} />
+              </motion.section>
+            )}
+          </div>
 
           {/* Features */}
           {project.features && (
             <motion.section {...fadeIn} className="mb-20">
-              <h2 className="text-xl font-semibold mb-8">Key Features</h2>
+              <h2 className="text-lg font-semibold mb-6">Key Features</h2>
               <div className="grid grid-cols-2 max-md:grid-cols-1 gap-6">
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 p-4 px-5 bg-emerald-800/10 rounded-sm border border-emerald-800/50 text-sm"
+                    className="flex items-center gap-2 p-3 px-4 bg-emerald-800/10 rounded-sm border border-emerald-800/50 text-sm"
                   >
-                    <Asterisk strokeWidth={1.5} className="text-emerald-800" />
-                    <span className="text-neutral-800">{feature}</span>
+                    <Asterisk
+                      strokeWidth={1.5}
+                      size={20}
+                      className="text-emerald-800"
+                    />
+                    <span className="text-neutral-900 font-medium">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -460,8 +467,8 @@ const CaseStudy = () => {
           {/* CTA */}
           <motion.div {...fadeIn} className="flex justify-center">
             <Link
-              href={"/case-studies"}
-              className="bg-emerald-500/70 text-neutral-950 flex gap-2 items-center font-medium border border-emerald-500/70 hover:bg-transparent rounded hover:text-emerald-500 transition-all  pr-4 pl-3 py-2"
+              href={"/works"}
+              className="bg-amber-500/70 text-neutral-950 flex gap-2 items-center font-medium border border-amber-500/0  hover:border-amber-500/70 hover:bg-transparent hover:text-amber-500 transition-all pr-4 pl-3 py-2"
             >
               <ArrowUpLeft size={18} /> Return
             </Link>

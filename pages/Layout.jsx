@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <div className="relative bg-emerald-50">
       <Head>
         <title>Saif Anees | Portfolio</title>
-        <link rel="favicon" href="/saif.jpg" />
+        <link rel="icon" type="image/x-icon" href="/pfp.png" />
       </Head>
       <Navbar />
       <div>{children}</div>
