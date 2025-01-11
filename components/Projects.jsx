@@ -97,16 +97,18 @@ const Projects = () => {
       <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6">
         <div className="h-60 aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-10" />
-          <Image
-            src={projects[currentProjectIndex]?.image}
-            alt={projects[currentProjectIndex]?.name}
-            width={1000}
-            height={1000}
-            onLoad={() => setIsImageLoaded(true)}
-            className={`w-full h-full object-cover transition-all duration-700 ${
-              isImageLoaded ? "scale-100 opacity-100" : "scale-110 opacity-0"
-            }`}
-          />
+          {projects[currentProjectIndex]?.image && (
+            <Image
+              src={projects[currentProjectIndex]?.image}
+              alt={projects[currentProjectIndex]?.name}
+              width={1000}
+              height={1000}
+              onLoad={() => setIsImageLoaded(true)}
+              className={`w-full h-full object-cover transition-all duration-700 ${
+                isImageLoaded ? "scale-100 opacity-100" : "scale-110 opacity-0"
+              }`}
+            />
+          )}{" "}
           <div className="absolute bottom-4 left-4 z-20 flex gap-2 items-center flex-wrap">
             {projects[currentProjectIndex]?.url && (
               <Link
