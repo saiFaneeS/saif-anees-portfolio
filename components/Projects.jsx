@@ -57,7 +57,7 @@ const Projects = () => {
       name: "Advance Lead Manager System",
       description: "Enterprise-grade lead management solution.",
       image: "/projects/lms copy.jpg",
-      slug: "/",
+      // slug: "/",
       icons: "nextdotjs-color.svg",
       year: "2024",
       tags: ["CRM", "TypeScript", , "Node.js", "MongoDB"],
@@ -127,7 +127,7 @@ const Projects = () => {
             )}
             {projects[currentProjectIndex]?.slug && (
               <Link
-                href={`/case-study/${projects[currentProjectIndex]?.slug}`}
+                href={`/case-study${projects[currentProjectIndex]?.slug}`}
                 className=""
               >
                 <button className="text-sm group flex items-center gap-2 bg-amber-50/80 hover:bg-amber-50/90 text-amber-900 px-4 py-1.5 rounded-sm font-medium transition-all">
