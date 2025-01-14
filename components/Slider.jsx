@@ -76,7 +76,7 @@ const Slider = () => {
                 User Interface
               </span>
               <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
-                Video Editing
+                AI
               </span>
               <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-amber-600/15 rounded-full">
                 & More
