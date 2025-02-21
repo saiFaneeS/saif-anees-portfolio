@@ -90,7 +90,7 @@ const Projects = () => {
 
   return (
     <div
-      className={`min-h-screen flex max-md:flex-col justify-center items-end max-md:items-start gap-12 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full 
+      className={`min-h-screen flex max-md:flex-col justify-center items-center max-md:items-start gap-12 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full 
       ${isActive ? "slide-out-top" : "slide-in-bottom"}
       ${pageChanged ? "hidden" : ""}`}
     >

@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -46,17 +46,18 @@ export const TrustIndicators = () => {
         exit={{ opacity: 0, y: -20 }}
         className="text-base md:text-sm font-medium flex gap-2 max-sm:items-start items-center max-lg:flex-wrap max-sm:flex-col"
       >
-        <span className="line-clamp-1 max-sm:line-clamp-3">
+        <span className="line-clamp-1 max-sm:line-clamp-2">
           {testimonials[currentIndex]?.text}
         </span>
 
-        <span className="text-sm text-white-100/60 flex gap-2 items-center grayscale text-nowrap">
+        <span className="text-sm text-white-100/60 flex gap-2 items-center justify-start max-sm:justify-between w-full">
+          <span className="flex items-center gap-2 grayscale text-nowrap">
           {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
             <Image
               src={testimonials[currentIndex]?.logo}
               height={100}
               width={100}
-              className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75"
+              className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75 grayscale"
             />
           )}
           {testimonials[currentIndex]?.author === "Igal S." && (
@@ -64,11 +65,11 @@ export const TrustIndicators = () => {
               src={testimonials[currentIndex]?.logo}
               height={100}
               width={100}
-              className="h-5 w-5 object-cover rounded-full"
+              className="h-5 w-5 object-cover rounded-full grayscale"
             />
           )}
           {testimonials[currentIndex]?.author === "Violet Clough" && (
-            <div className="bg-violet-600 p-[2px] rounded-full">
+            <div className="bg-violet-600 p-[2px] rounded-full grayscale">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="15"
@@ -90,6 +91,10 @@ export const TrustIndicators = () => {
             </div>
           )}
           {testimonials[currentIndex]?.author}
+          </span>
+          <span>
+            <Quote className="size-4 text-emerald-500" />
+          </span>
         </span>
       </motion.div>
     </div>

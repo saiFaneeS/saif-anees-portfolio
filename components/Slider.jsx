@@ -8,13 +8,13 @@ const Slider = () => {
   const images = [{ id: 1 }, { id: 2 }];
 
   return (
-    <div className="relative flex overflow-hidden items-center py-4 gap-28">
-      {/* Slider Wrapper */}
+    <div
+      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-4 border-emerald-900/20 backdrop-blur-3xl bg-emerald-800/[5%] hover:bg-emerald-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}>      {/* Slider Wrapper */}
       {panel.map((el) => {
         return (
           <div
             key={el.id}
-            className="flex gap-20 sm:animate-scroll whitespace-nowrap"
+            className="flex gap-20 sm:animate-scroll whitespace-nowrap group-hover:paused"
           >
             <div className="flex gap-2">
               <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-neutral-300/50 overflow-hidden">
@@ -62,7 +62,7 @@ const Slider = () => {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80 max-sm:hidden">
+            <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80">
               <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
                 Apps
               </span>
@@ -83,7 +83,7 @@ const Slider = () => {
               </span>
             </div>
 
-            <div className="relative flex justify-center items-center z-20 max-sm:invisible">
+            <div className="relative flex justify-center items-center z-20">
               <svg
                 className="w-[90px] h-[90px] animate-rotate rounded-full"
                 viewBox="0 0 200 200"
