@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-x-hidden text-slate-950 max-sm:h-[88vh] flex flex-col justify-start max-sm:justify-between gap-8 max-sm:gap-4 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-32 absolute w-full lg:overflow-hidden lg:h-screen ${isActive ? "slide-out-top" : "slide-in-bottom"
+      className={`h-screen overflow-x-hidden text-slate-950 max-sm:h-[88vh] flex flex-col justify-center gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-32 absolute w-full lg:overflow-hidden lg:h-screen ${isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
     >
       <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none">
@@ -55,7 +55,7 @@ export default function Hero() {
 
       {/* works panel */}
       <div className="flex gap-2 sm:hidden mb-4">
-        <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-neutral-300/50 overflow-hidden">
+        <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-emerald-800/[5%] border border-emerald-900/20 overflow-hidden">
           {images.map((el) => {
             return (
               <>
@@ -101,7 +101,7 @@ export default function Hero() {
       </div>
 
 
-      <div className="flex w-full gap-6 backdrop-blur-3xl max-sm:bg-emerald-800/[5%] max-sm:hover:bg-emerald-800/10 max-sm:border-2 border-emerald-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
+      <div className="flex w-full gap-6 backdrop-blur-3xl max-sm:bg-emerald-800/[5%] max-sm:hover:bg-emerald-800/10 max-sm:border border-emerald-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
         <TrustIndicators />
       </div>
       </div>
