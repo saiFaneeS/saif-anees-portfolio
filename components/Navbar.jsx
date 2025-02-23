@@ -17,13 +17,13 @@ const Navbar = () => {
     const hours = date.getHours();
     const minutes = date.getMinutes();
     const formattedTime = `${hours}:${minutes < 10 ? "0" : ""}${minutes}`;
-    setCurrentTime(formattedTime);
+    setCurrentTime(formattedTime); 
   }, []);
 
   return (
     <>
       <div
-        className={`fixed top-0 bg-emerald-50 backdrop-blur-2xl text-neutral-950 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 pb-3 max-sm:pt-6 z-20`}
+        className={`fixed top-0 text-neutral-950 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 pb-3 max-sm:pt-6 z-20`}
       >
         <Link
           href={"/"}
@@ -53,7 +53,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`h-screen w-full fixed left-0 border-b border-b-black flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${isActive ? "top-0" : "top-[-140%]"
+        className={`h-screen backdrop-blur-sm w-full fixed left-0 border-b border-b-black flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${isActive ? "top-0" : "top-[-140%]"
           }`}
       >
         <div className="font-semibold flex flex-col text-4xl leading-none mb-8 -ml-9 pt-20 list-none">

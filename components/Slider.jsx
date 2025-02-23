@@ -9,7 +9,7 @@ const Slider = () => {
 
   return (
     <div
-      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-4 border-emerald-900/20 backdrop-blur-3xl bg-emerald-800/[5%] hover:bg-emerald-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}>      {/* Slider Wrapper */}
+      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-4 border-emerald-900/20 backdrop-blur-xl bg-emerald-800/[5%] hover:bg-emerald-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}>      {/* Slider Wrapper */}
       {panel.map((el) => {
         return (
           <div

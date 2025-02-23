@@ -1,9 +1,7 @@
-import Navbar from "@/components/Navbar";
-import { Mail } from "lucide-react";
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
+import Head from "next/head";
+import Navbar from "@/components/Navbar";
+import Backdrop3d from "@/components/Backdrop3d";
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +11,7 @@ const Layout = ({ children }) => {
         <link rel="icon" type="image/x-icon" href="/pfp.png" />
       </Head>
       <Navbar />
+      <Backdrop3d />
       <div>{children}</div>
     </div>
   );
