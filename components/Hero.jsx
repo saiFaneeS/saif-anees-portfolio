@@ -71,7 +71,7 @@ export default function Hero() {
           AI Integration
         </span>
       </div>
-      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-cyan-500 drop-shadow-md">
+      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-cyan-500 drop-shadow-md max-sm:drop-shadow-sm">
         <div>
           <h1
             className={`leading-none font-semibold flex break-words justify-start items-center text-left text-slide-in-bottom`}
@@ -84,7 +84,7 @@ export default function Hero() {
           </h1>
         </div>
         <div className="overflow-hidden -mr-4">
-          <h1 className="leading-none text-slide-in-bottom max-sm:break-words text-cyan-950 drop-shadow-md">
+          <h1 className="leading-none text-slide-in-bottom max-sm:break-words text-cyan-950 drop-shadow-md max-sm:drop-shadow-sm">
             DEVELOPER
           </h1>
         </div>
