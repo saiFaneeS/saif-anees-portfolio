@@ -9,11 +9,11 @@
 }
 
 body {
-  background-color: #ecfdf5;
+  background-color: #CDFFE8;
 }
 
 .text-main {
-  color: rgb(34, 190, 110);
+  color: rgb(24, 223, 120);
 }
 
 @layer base {

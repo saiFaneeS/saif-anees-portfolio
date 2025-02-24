@@ -17,7 +17,7 @@ const Slider = () => {
             className="flex gap-20 sm:animate-scroll whitespace-nowrap group-hover:paused"
           >
             <div className="flex gap-2">
-              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-neutral-300/50 overflow-hidden">
+              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-emerald-800/20 overflow-hidden">
                 {images.map((el) => {
                   return (
                     <>
@@ -26,6 +26,7 @@ const Slider = () => {
                           src={"/ohghad-web.png"}
                           height={200}
                           width={200}
+                          alt=""
                           className="h-full w-full object-cover rounded-md shadow-xl"
                         />
                       </div>
@@ -34,6 +35,7 @@ const Slider = () => {
                           src={"/msre.png"}
                           height={200}
                           width={200}
+                          alt=""
                           className="h-full w-full object-cover rounded-md shadow-xl"
                         />
                       </div>
@@ -42,6 +44,7 @@ const Slider = () => {
                           src={"/mslm.webp"}
                           height={200}
                           width={200}
+                          alt=""
                           className="h-full w-full object-cover rounded-md shadow-xl"
                         />
                       </div>
@@ -63,19 +66,19 @@ const Slider = () => {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-2 text-sm min-w-80 max-w-80">
-              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full">
                 Apps
               </span>
-              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full">
                 Websites
               </span>
-              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full">
                 Design
               </span>
-              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full">
                 User Interface
               </span>
-              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+              <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full">
                 AI
               </span>
               <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-amber-600/15 rounded-full">
@@ -108,7 +111,7 @@ const Slider = () => {
 
               <Link
                 href="mailto:saifanees11@gmail.com"
-                className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-200 hover:bg-amber-300 rounded-full p-4"
+                className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-400 hover:bg-amber-300 rounded-full p-4"
               >
                 <Mail className="h-7 w-7" strokeWidth={1.2} />
               </Link>

@@ -53,61 +53,6 @@ export default function Hero() {
         </div>
       </div>
 
-      <div>
-        {/* works panel */}
-        <div className="flex gap-0 sm:hidden mb-4">
-          <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-emerald-800/[5%] border border-emerald-900/20 overflow-hidden">
-            {images.map((el) => {
-              return (
-                <>
-                  <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
-                    <Image
-                      src={"/ohghad-web.png"}
-                      height={200}
-                      width={200}
-                      className="h-full w-full object-cover rounded-md shadow-xl"
-                    />
-                  </div>
-                  <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
-                    <Image
-                      src={"/msre.png"}
-                      height={200}
-                      width={200}
-                      className="h-full w-full object-cover rounded-md shadow-xl"
-                    />
-                  </div>
-                  <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
-                    <Image
-                      src={"/mslm.webp"}
-                      height={200}
-                      width={200}
-                      className="h-full w-full object-cover rounded-md shadow-xl"
-                    />
-                  </div>
-                </>
-              );
-            })}
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <h4 className="text-base font-medium leading-none mb-4">
-              My Works
-            </h4>
-            <Link
-              href={"/works"}
-              className="px-4 py-1 flex gap-2 items-center hover:underline text-sm text-nowrap"
-            >
-              <ArrowRight size={16} strokeWidth={1.5} /> Learn More
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex w-full gap-6 max-sm:bg-emerald-800/[5%] max-sm:hover:bg-emerald-800/10 max-sm:border border-emerald-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
-          <TrustIndicators />
-        </div>
-      </div>
-
-      <Slider />
-
       <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
           Apps
@@ -146,6 +91,63 @@ export default function Hero() {
           AI Integration
         </span>
       </div>
+
+      <div>
+        {/* works panel */}
+        <div className="flex gap-0 sm:hidden mb-4">
+          <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-emerald-600/10 overflow-hidden">
+            {images.map((el) => {
+              return (
+                <>
+                  <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
+                    <Image
+                      src={"/ohghad-web.png"}
+                      height={200}
+                      width={200}
+                      className="h-full w-full object-cover rounded-md shadow-xl"
+                    />
+                  </div>
+                  <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
+                    <Image
+                      src={"/msre.png"}
+                      height={200}
+                      width={200}
+                      alt=""
+                      className="h-full w-full object-cover rounded-md shadow-xl"
+                    />
+                  </div>
+                  <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
+                    <Image
+                      src={"/mslm.webp"}
+                      height={200}
+                      width={200}
+                      alt=""
+                      className="h-full w-full object-cover rounded-md shadow-xl"
+                    />
+                  </div>
+                </>
+              );
+            })}
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <h4 className="text-base font-medium leading-none mb-4">
+              My Works
+            </h4>
+            <Link
+              href={"/works"}
+              className="px-4 py-1 flex gap-2 items-center hover:underline text-sm text-nowrap"
+            >
+              <ArrowRight size={16} strokeWidth={1.5} /> Learn More
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex w-full gap-6 max-sm:bg-emerald-400/10 max-sm:backdrop-blur-md max-sm:hover:bg-emerald-800/10 max-sm:border border-emerald-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
+          <TrustIndicators />
+        </div>
+      </div>
+
+      <Slider />
     </div>
   );
 }

@@ -33,7 +33,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 text-white-100/90 sm:max-w-5xl">
+    <div className="flex items-center max-sm:items-start justify-center max-sm:flex-col gap-2 sm:max-w-5xl">
       <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
@@ -57,6 +57,7 @@ export const TrustIndicators = () => {
               src={testimonials[currentIndex]?.logo}
               height={100}
               width={100}
+              alt=""
               className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75 grayscale"
             />
           )}
@@ -65,6 +66,7 @@ export const TrustIndicators = () => {
               src={testimonials[currentIndex]?.logo}
               height={100}
               width={100}
+              alt=""
               className="h-5 w-5 object-cover rounded-full grayscale"
             />
           )}
@@ -93,7 +95,7 @@ export const TrustIndicators = () => {
           {testimonials[currentIndex]?.author}
           </span>
           <span>
-            <Quote className="size-4 text-emerald-500" />
+            <Quote className="size-4 text-emerald-600" />
           </span>
         </span>
       </motion.div>

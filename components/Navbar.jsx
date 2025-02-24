@@ -33,6 +33,7 @@ const Navbar = () => {
             src={"/pfp.png"}
             height={500}
             width={500}
+            alt=""
             className="w-6 aspect-square object-cover rounded-full"
           />
           Saif Anees
