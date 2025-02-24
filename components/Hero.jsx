@@ -99,7 +99,7 @@ export default function Hero() {
                 <>
                   <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
                     <Image
-                      src={"/new/ohghad.jpg"}
+                      src={"/new/ohghad1.jpg"}
                       height={200}
                       width={200}
                       alt=""
