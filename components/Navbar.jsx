@@ -1,5 +1,5 @@
 import { useNavbar } from "@/context/Navbar";
-import { ArrowUpRightFromCircle, LayoutGrid, Linkedin, Menu } from "lucide-react";
+import { ArrowUpRightFromCircle, Linkedin, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,18 +7,9 @@ import React, { useState, useEffect } from "react";
 
 const Navbar = () => {
   const { isActive, setIsActive, pageChanged, setPageChanged } = useNavbar();
-  const [currentTime, setCurrentTime] = useState("");
 
   const router = useRouter();
   const path = router.pathname;
-
-  useEffect(() => {
-    const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const formattedTime = `${hours}:${minutes < 10 ? "0" : ""}${minutes}`;
-    setCurrentTime(formattedTime); 
-  }, []);
 
   return (
     <>
@@ -27,10 +18,10 @@ const Navbar = () => {
       >
         <Link
           href={"/"}
-          className="text-lg font-semibold flex gap-3 items-center shrink-0"
+          className="text-lg font-semibold flex gap-3 items-center shrink-0 grayscale contrast-125"
         >
           <Image
-            src={"/pfp.png"}
+            src={"/pfp.jpg"}
             height={500}
             width={500}
             alt=""
@@ -38,14 +29,15 @@ const Navbar = () => {
           />
           Saif Anees
         </Link>
-        {/* <div className="bg-neutral-900 w-full h-4 rounded-full max-md:hidden"></div> */}
         <div className="text-lg font-semibold flex gap-4 items-center justify-center">
-          {/* <span>{currentTime}</span> */}
-          <Link href={"https://www.linkedin.com/in/saif-anees/"}
-          className="cursor-pointer flex leading-none gap-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
-          ><Linkedin size={20}/></Link>
+          <Link
+            href={"https://www.linkedin.com/in/saif-anees/"}
+            className="cursor-pointer leading-none gap-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
+          >
+            <Linkedin size={20} />
+          </Link>
           <div
-            className="cursor-pointer flex leading-none gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/10 hover:border-emerald-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
+            className="cursor-pointer leading-none gap-2 bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/10 hover:border-emerald-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
             onClick={() => setIsActive(!isActive)}
           >
             <Menu size={24} strokeWidth={2} />
@@ -54,8 +46,9 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`h-screen backdrop-blur-sm w-full fixed left-0 border-b border-b-black flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${isActive ? "top-0" : "top-[-140%]"
-          }`}
+        className={`h-screen backdrop-blur-sm w-full fixed left-0 border-b border-b-black flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${
+          isActive ? "top-0" : "top-[-140%]"
+        }`}
       >
         <div className="font-semibold flex flex-col text-4xl leading-none mb-8 -ml-9 pt-20 list-none">
           <li
