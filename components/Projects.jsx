@@ -16,7 +16,7 @@ const Projects = () => {
     {
       name: "MS Real Estate LLC",
       description: "Luxury real estate platform for property listings.",
-      image: "/projects/msre2.jpeg",
+      image: "/new/ms_re.jpg",
       url: "https://www.msrealestate.ae",
       slug: "/ms-real-estate",
       icons: "nextdotjs-color.svg",
@@ -26,7 +26,7 @@ const Projects = () => {
     {
       name: "Noblesoft Agency",
       description: "Digital agency website with modern design and animations.",
-      image: "/projects/noblesoft.jpg",
+      image: "/new/noblesoft.jpg",
       url: "https://noblesoft.vercel.app",
       // slug: "/",
       icons: "nextdotjs-color.svg",
@@ -36,7 +36,7 @@ const Projects = () => {
     {
       name: "Oh GHAD! Fundraiser Site",
       description: "Non-profit fundraising platform with donation integration.",
-      image: "/projects/ohghad1.jpeg",
+      image: "/new/ohghad.jpg",
       url: "https://www.ohghad.org",
       slug: "/ohghad-non-profit",
       icons: "wp.svg",
@@ -46,7 +46,7 @@ const Projects = () => {
     {
       name: "Luxury Motors Booking",
       description: "Premium vehicle booking and management system.",
-      image: "/projects/mslm.jpg",
+      image: "/new/ms_lm.jpg",
       url: "https://modernstandards.ae",
       slug: "/ms-luxury-motors",
       icons: "nextdotjs-color.svg",
@@ -56,7 +56,7 @@ const Projects = () => {
     {
       name: "Advance Lead Manager System",
       description: "Enterprise-grade lead management solution.",
-      image: "/projects/lms copy.jpg",
+      image: "/new/lms.jpg",
       // slug: "/",
       icons: "nextdotjs-color.svg",
       year: "2024",
@@ -116,7 +116,7 @@ const Projects = () => {
                 target="_blank"
                 className=""
               >
-                <button className="text-sm group flex items-center gap-2 bg-white/80 hover:bg-emerald-100/90 text-neutral-800 hover:text-emerald-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                <button className="text-sm group flex items-center gap-2 bg-white/80 hover:bg-cyan-100/90 text-neutral-800 hover:text-cyan-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                   Visit Site
                   <ExternalLink
                     size={16}
@@ -173,7 +173,7 @@ const Projects = () => {
                   (prev) => (prev - 1 + projects.length) % projects.length
                 )
               }
-              className="p-2 border  hover:bg-emerald-100/50 rounded-full transition-colors"
+              className="p-2 border  hover:bg-cyan-100/50 rounded-full transition-colors"
             >
               <ArrowBigUp size={22} strokeWidth={1.2} />
             </button>
@@ -181,7 +181,7 @@ const Projects = () => {
               onClick={() =>
                 setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
               }
-              className="p-2 border hover:bg-emerald-100/50 rounded-full transition-colors"
+              className="p-2 border hover:bg-cyan-100/50 rounded-full transition-colors"
             >
               <ArrowBigDown size={22} strokeWidth={1.2} />
             </button>
@@ -195,8 +195,8 @@ const Projects = () => {
               onClick={() => setCurrentProjectIndex(index)}
               className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                 index === currentProjectIndex
-                  ? "bg-emerald-950 text-white"
-                  : "hover:bg-emerald-100/50"
+                  ? "bg-cyan-950 text-white"
+                  : "hover:bg-cyan-100/50"
               }`}
             >
               <div className="text-sm flex items-center gap-4">

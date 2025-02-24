@@ -52,50 +52,50 @@ export const TrustIndicators = () => {
 
         <span className="text-sm text-white-100/60 flex gap-2 items-center justify-start max-sm:justify-between w-full">
           <span className="flex items-center gap-2 grayscale text-nowrap">
-          {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
-            <Image
-              src={testimonials[currentIndex]?.logo}
-              height={100}
-              width={100}
-              alt=""
-              className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75 grayscale"
-            />
-          )}
-          {testimonials[currentIndex]?.author === "Igal S." && (
-            <Image
-              src={testimonials[currentIndex]?.logo}
-              height={100}
-              width={100}
-              alt=""
-              className="h-5 w-5 object-cover rounded-full grayscale"
-            />
-          )}
-          {testimonials[currentIndex]?.author === "Violet Clough" && (
-            <div className="bg-violet-600 p-[2px] rounded-full grayscale">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#efefef"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-flower-lotus"
-              >
-                <path d="M12 20c0-5.5-4.5-10-10-10 0 5.5 4.5 10 10 10" />
-                <path d="M9.7 8.3c-1.8-2-3.8-3.1-3.8-3.1s-.8 2.5-.5 5.4" />
-                <path d="M15 12.9V12c0-4.4-3-8-3-8s-3 3.6-3 8v.9" />
-                <path d="M18.6 10.6c.3-2.9-.5-5.4-.5-5.4s-2 1-3.8 3.1" />
-                <path d="M12 20c5.5 0 10-4.5 10-10-5.5 0-10 4.5-10 10" />
-              </svg>{" "}
-            </div>
-          )}
-          {testimonials[currentIndex]?.author}
+            {testimonials[currentIndex]?.author === "Tami Ross, Ohghad CEO" && (
+              <Image
+                src={testimonials[currentIndex]?.logo}
+                height={100}
+                width={100}
+                alt=""
+                className="h-5 w-5 object-contain rounded-full contrast-150 brightness-75 grayscale"
+              />
+            )}
+            {testimonials[currentIndex]?.author === "Igal S." && (
+              <Image
+                src={testimonials[currentIndex]?.logo}
+                height={100}
+                width={100}
+                alt=""
+                className="h-5 w-5 object-cover rounded-full grayscale"
+              />
+            )}
+            {testimonials[currentIndex]?.author === "Violet Clough" && (
+              <div className="bg-violet-600 p-[2px] rounded-full grayscale">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#efefef"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-flower-lotus"
+                >
+                  <path d="M12 20c0-5.5-4.5-10-10-10 0 5.5 4.5 10 10 10" />
+                  <path d="M9.7 8.3c-1.8-2-3.8-3.1-3.8-3.1s-.8 2.5-.5 5.4" />
+                  <path d="M15 12.9V12c0-4.4-3-8-3-8s-3 3.6-3 8v.9" />
+                  <path d="M18.6 10.6c.3-2.9-.5-5.4-.5-5.4s-2 1-3.8 3.1" />
+                  <path d="M12 20c5.5 0 10-4.5 10-10-5.5 0-10 4.5-10 10" />
+                </svg>{" "}
+              </div>
+            )}
+            {testimonials[currentIndex]?.author}
           </span>
           <span>
-            <Quote className="size-4 text-emerald-600" />
+            <Quote className="size-4 text-cyan-600" />
           </span>
         </span>
       </motion.div>

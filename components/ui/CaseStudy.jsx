@@ -9,7 +9,6 @@ import {
   ExternalLink,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import ContactUs from "@/components/Contact";
 import { useRouter } from "next/router";
 import { ImageCarousel } from "../ImageCarousel";
 import { useNavbar } from "@/context/Navbar";
@@ -29,8 +28,9 @@ const CaseStudy = () => {
   const projects = [
     // Ohghad
     {
+      color: "green",
       projectName: "Ohghad - Fundraiser Web Design & Development",
-      projectCover: "/ohghad/cover.png",
+      projectCover: "/new/ohghad.jpg",
       client: {
         name: "Ohghad.org",
         location: "Ghana",
@@ -45,10 +45,8 @@ const CaseStudy = () => {
         "Designed and developed a new website for Ohghad.org, a non-profit organization based in Ghana.",
       features: [
         "User-friendly donation interface",
-        "Event management system",
         "Volunteer sign-up and management",
         "Content management system (CMS)",
-        "Blog for updates and news",
         "Social media integration",
       ],
       technologies: {
@@ -78,8 +76,9 @@ const CaseStudy = () => {
     },
     // MS Real Estate
     {
+      color: "green",
       projectName: "MS Real Estate Website Redesign",
-      projectCover: "/msre/cover.png",
+      projectCover: "/new/ms_re.jpg",
       client: {
         name: "MS Real Estate Company",
         location: "UAE",
@@ -92,14 +91,11 @@ const CaseStudy = () => {
       description:
         "Redesigned the MS Real Estate website to modernize its look and user experience. The aim was to create a visually appealing website that sets it apart from competitors.",
       features: [
-        "Minimalist design with modern aesthetics",
         "Integration with Property Finder XML for property listings",
-        "Search filter functionality for easy property discovery",
         "Property comparison feature",
-        "Direct WhatsApp contact for agents",
         "Agent profile cards",
         "Retention modal for user engagement",
-        "Responsive design for all devices",
+        "Responsive across all devices",
         "CMS-managed blogs for agents",
       ],
       slug: "ms-real-estate",
@@ -127,115 +123,13 @@ const CaseStudy = () => {
         "Integrated Property Finder XML for property listings and added advanced search filters",
       ],
     },
-    // Idan
-    {
-      projectName: "Idan Shmulevich Branding",
-      projectCover: "/idan/cover.jpeg",
-      client: {
-        name: "Idan Shmulevich",
-        location: "-",
-      },
-      businessType: "Martial Artist",
-      year: 2023,
-      description:
-        "Provided complete branding for Idan Shmulevich, a young Ji Jitsu martial artist, including multiple logo concepts and finalizing one for various products.",
-      features: [
-        "Multiple logo concepts",
-        "Finalized logo design",
-        "Branding for various products",
-      ],
-      toolsUsed: ["Photoshop", "Figma"],
-      slug: "idan-shmulevich-branding",
-      projectImages: ["/idan/1.jpeg", "/idan/cover.jpeg"],
-      projectTitle: "Idan Shmulevich Branding",
-      objectives: [
-        "Establish a unique and recognizable brand identity",
-        "Create versatile branding materials",
-      ],
-      challenges: [
-        "Developing a distinctive brand identity for a niche market (martial arts)",
-        "Designing versatile branding materials that work across various media",
-        "Capturing the essence of the client’s personal brand in the logo and other materials",
-      ],
-      solutions: [
-        "Developed multiple logo concepts and finalized one that captured the essence of the client's brand",
-        "Created branding materials tailored for various products",
-      ],
-    },
-    // Alfalah
-    {
-      projectName: "Facebook Ads for Alfalah Int Traders",
-      projectCover: "/alfalah/cover.jpeg",
-      client: {
-        name: "Alfalah Int Traders",
-        location: "Pakistan",
-      },
-      businessType: "Trading Company",
-      year: 2024,
-      description:
-        "Created social media ad designs for Alfalah Int Traders to enhance their online presence and marketing efforts.",
-      features: [
-        "Engaging and visually appealing ad designs",
-        "Consistency with brand identity",
-        "Targeted for social media platforms",
-      ],
-      toolsUsed: ["Photoshop", "Figma"],
-      slug: "alfalah-int-traders",
-      projectImages: ["/alfalah/cover.jpeg"],
-      projectTitle: "Facebook Ads for Alfalah Int Traders",
-      objectives: ["Enhance online presence", "Improve marketing efforts"],
-      challenges: [
-        "Increasing online engagement and presence through visually appealing ads",
-        "Aligning ad designs with the brand's identity",
-        "Ensuring targeted reach on social media platforms",
-      ],
-      solutions: [
-        "Designed a series of engaging social media ads that align with the brand's identity",
-        "Maintained consistency in design to reflect the brand's values and message",
-      ],
-    },
-    // IGT
-    {
-      projectName: "Social Media Designs for IGT",
-      projectCover: "/igt/cover.jpeg",
-      client: {
-        name: "Interlink Global Traders",
-        location: "Malaysia",
-      },
-      businessType: "Trading Company",
-      year: 2024,
-      description:
-        "Developed comprehensive branding materials for Interlink Global Traders, including logo design, cover design, and Facebook ad designs.",
-      features: [
-        "Logo design",
-        "Cover design",
-        "Facebook ad designs",
-        "Consistency with brand identity",
-      ],
-      toolsUsed: ["Photoshop", "Figma"],
-      slug: "interlink-global-traders",
-      projectImages: ["/igt/cover.jpeg"],
-      projectTitle: "Social Media Designs for IGT",
-      objectives: [
-        "Establish a strong brand identity",
-        "Create engaging social media content",
-      ],
-      challenges: [
-        "Creating cohesive branding materials that represent the company's identity",
-        "Ensuring engagement through social media content",
-        "Maintaining consistency in brand representation across different formats",
-      ],
-      solutions: [
-        "Developed a consistent and visually appealing brand identity through various design elements",
-        "Designed engaging social media content that aligns with the company’s brand",
-      ],
-    },
     // MS Luxury Motors
     {
-      projectName: "Modern Standards Luxury Motors Website",
-      projectCover: "/mslm/cover.jpg",
+      color: "blue",
+      projectName: "MS Luxury Motors Booking Site",
+      projectCover: "/new/ms_lm.jpg",
       client: {
-        name: "Modern Standards Luxury Motors",
+        name: "MS Luxury Motors LLC",
         location: "UAE",
       },
       businessType: "Limousine Booking Service",
@@ -265,7 +159,7 @@ const CaseStudy = () => {
         "/mslm/3.jpg",
         "/mslm/4.jpg",
       ],
-      projectTitle: "Modern Standards Luxury Motors Website",
+      projectTitle: "Luxury Chauffeur Booking Site",
       objectives: [
         "Provide a seamless booking experience",
         "Establish an online presence",
@@ -279,6 +173,45 @@ const CaseStudy = () => {
         "Developed a website using the latest technologies to meet the client's requirements for design, functionality, and ease of management",
         "Implemented a user-friendly booking interface and messaging system",
       ],
+    },
+    // CRM
+    {
+      color: "green",
+      color: "green",
+      projectName: "Custom CRM Solution",
+      projectCover: "/new/crm.jpg",
+      client: {
+        name: "CRM Platform",
+        location: "-",
+      },
+      businessType: "Software Development",
+      year: 2024,
+      description:
+        "Developed a powerful, fully customizable CRM with advanced features for efficient lead and task management.",
+      features: [
+        "Drag-and-Drop Custom Lead Pipelines",
+        "Leads, Team & Tasks Management",
+        "User Roles & Permissions",
+        "Advanced Analytics & Reporting",
+      ],
+      slug: "custom-crm-solution",
+      objectives: [
+        "Streamline business operations with an all-in-one CRM",
+        "Provide teams with an intuitive and scalable workflow",
+        "Improve efficiency through automation and analytics",
+      ],
+      challenges: [
+        "Designing a system that is both powerful and user-friendly",
+        "Ensuring scalability for teams of all sizes",
+        "Implementing seamless drag-and-drop pipeline customization",
+      ],
+      solutions: [
+        "Built a modular CRM with fully customizable workflows",
+        "Integrated automation for lead tracking and task assignments",
+        "Developed advanced analytics dashboards for better decision-making",
+      ],
+      projectImages: ["/new/crm.jpg"],
+      projectTitle: "Custom CRM Solution",
     },
   ];
 
@@ -298,6 +231,15 @@ const CaseStudy = () => {
 
   if (!project) return null;
 
+  const colorClasses = {
+    blue: "border-blue-500/80",
+    green: "border-green-500/80",
+    purple: "border-violet-500/80",
+    red: "border-red-500/80",
+    amber: "border-amber-500/80",
+    cyan: "border-cyan-500/80",
+  };
+
   return (
     <>
       <div
@@ -305,92 +247,85 @@ const CaseStudy = () => {
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >
+        <nav className="flex items-center gap-2 text-sm mb-6 mt-14 sm:mt-10">
+          <Link
+            href="/works"
+            className="flex items-center gap-2 text-neutral-600 hover:text-white-100 transition-colors group"
+          >
+            <ArrowLeft
+              size={16}
+              className="group-hover:-translate-x-1 transition-transform"
+            />
+            All Works
+          </Link>
+          <ChevronRight size={14} className="text-gray-600" />
+          <span className="textcyan600">{project.client.name}</span>
+        </nav>
+
         {/* Hero Section */}
-        <motion.header
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="pt-24"
+        <motion.div
+          {...fadeIn}
+          className="mb-8 grid grid-cols-2 gap-6 max-lg:grid-cols-1"
         >
-          <nav className="flex items-center gap-2 text-sm mb-6">
-            <Link
-              href="/works"
-              className="flex items-center gap-2 text-neutral-600 hover:text-white-100 transition-colors group"
-            >
-              <ArrowLeft
-                size={16}
-                className="group-hover:-translate-x-1 transition-transform"
-              />
-              All Works
-            </Link>
-            <ChevronRight size={14} className="text-gray-600" />
-            <span className="text-emerald-600">{project.client.name}</span>
-          </nav>
-
-          <motion.div {...fadeIn} className="mt-4 max-w-5xl">
-            <div className="flex flex-wrap gap-3 mb-4">
-              {project.platform?.frontend?.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full"
-                >
-                  {tech}
-                </span>
-              ))}
-              {project.platform?.backend?.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-
+          <div className="bg-cyan-950 text-background rounded-lg p-8 relative overflow-hidden">
+            <div
+              className={`h-60 aspect-square rounded-full border-[24px] ${
+                colorClasses[project.color]
+              } absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2`}
+            ></div>{" "}
+            {project.platform && (
+              <div className="flex flex-wrap gap-3 mb-4">
+                {[
+                  ...(project.platform.frontend || []),
+                  ...(project.platform.backend || []),
+                ].map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 text-xs font-medium text-emerald-200 bg-emerald-900/30 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            )}
             <h1 className="text-xl font-semibold mb-4">
               {project.projectTitle}
             </h1>
+            <p className=" leading-relaxed">{project.description}</p>
+            {/* Objectives */}
+            <motion.section {...fadeIn} className="mt-8 text-cyan-50 ">
+              <div>
+                <h2 className="text-lg font-semibold mt-2 mb-4">Objectives</h2>
+                <ul className="space-y-4">
+                  {project.objectives?.map((objective, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-1.5 h-0.5 rounded-full bg-cyan-50 mt-2.5 shrink-0" />
+                      <span>{objective}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.section>
+          </div>
 
-            <p className="text-base text-neutral-800 leading-relaxed mb-6">
-              {project.description}
-            </p>
-          </motion.div>
-
-          <motion.div
-            {...fadeIn}
-            transition={{ delay: 0.2 }}
-            className="mt-10 rounded-md overflow-hidden"
-          >
+          {/* Main Image */}
+          <div className="rounded-lg overflow-hidden">
             <Image
               src={project.projectCover}
               alt={project.projectTitle}
-              width={1920}
-              height={1080}
-              className="w-full aspect-video max-h-96 object-cover"
+              width={1000}
+              height={1000}
+              className="w-full h-full aspect-video object-cover"
             />
-          </motion.div>
-        </motion.header>
+          </div>
+        </motion.div>
 
         {/* Content Sections */}
         <div className="py-12 mb-4">
           <div className="relative grid grid-cols-2 max-md:grid-cols-1 gap-8">
             <div>
               {/* Objectives */}
-              <motion.section {...fadeIn} className="mb-12">
-                {/* <span className="text-main-900 font-mono">01</span> */}
-                <div>
-                  <h2 className="text-lg font-semibold mt-2 mb-4">
-                    Objectives
-                  </h2>
-                  <ul className="space-y-4">
-                    {project.objectives?.map((objective, i) => (
-                      <li key={i} className="flex items-start gap-3">
-                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
-                        <span className="text-neutral-800">{objective}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.section>
+
               {/* Challenges */}
               <motion.section {...fadeIn} className="mb-12">
                 <div>
@@ -448,12 +383,12 @@ const CaseStudy = () => {
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 p-3 px-4 bg-emerald-800/10 rounded-sm border border-emerald-800/50 text-sm"
+                    className="flex items-center gap-2 p-3 px-4 bg-cyan-600/20 rounded-sm border border-cyan-600/20 text-sm"
                   >
                     <Asterisk
                       strokeWidth={1.5}
                       size={20}
-                      className="text-emerald-800"
+                      className="textcyan800"
                     />
                     <span className="text-neutral-900 font-medium">
                       {feature}

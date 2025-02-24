@@ -9,7 +9,10 @@ const Slider = () => {
 
   return (
     <div
-      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-4 border-emerald-900/20 backdrop-blur-xl bg-emerald-800/[5%] hover:bg-emerald-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}>      {/* Slider Wrapper */}
+      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-4 border-cyan-900/20 backdrop-blur-xl bg-cyan-800/[5%] hover:bg-cyan-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}
+    >
+      {" "}
+      {/* Slider Wrapper */}
       {panel.map((el) => {
         return (
           <div
@@ -17,13 +20,13 @@ const Slider = () => {
             className="flex gap-20 sm:animate-scroll whitespace-nowrap group-hover:paused"
           >
             <div className="flex gap-2">
-              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-emerald-800/20 overflow-hidden">
+              <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-cyan-800/20 overflow-hidden">
                 {images.map((el) => {
                   return (
                     <>
                       <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
                         <Image
-                          src={"/ohghad-web.png"}
+                          src={"/new/ohghad.jpg"}
                           height={200}
                           width={200}
                           alt=""
@@ -32,7 +35,7 @@ const Slider = () => {
                       </div>
                       <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
                         <Image
-                          src={"/msre.png"}
+                          src={"/new/ms_re.jpg"}
                           height={200}
                           width={200}
                           alt=""
@@ -41,7 +44,7 @@ const Slider = () => {
                       </div>
                       <div className="animate-snap-scroll snap-center snap-x snap-mandatory whitespace-nowrap h-20 max-sm:h-16 aspect-video animate-snap-loop">
                         <Image
-                          src={"/mslm.webp"}
+                          src={"/new/ms_lm.jpg"}
                           height={200}
                           width={200}
                           alt=""
@@ -111,7 +114,7 @@ const Slider = () => {
 
               <Link
                 href="mailto:saifanees11@gmail.com"
-                className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-green-400 hover:bg-amber-300 rounded-full p-4"
+                className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-cyan-400 hover:bg-amber-300 rounded-full p-4"
               >
                 <Mail className="h-7 w-7" strokeWidth={1.2} />
               </Link>
