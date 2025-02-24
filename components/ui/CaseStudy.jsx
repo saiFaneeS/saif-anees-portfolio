@@ -30,7 +30,7 @@ const CaseStudy = () => {
     {
       color: "green",
       projectName: "Ohghad - Fundraiser Web Design & Development",
-      projectCover: "/new/ohghad.jpg",
+      projectCover: "/new/ohghad1.jpg",
       client: {
         name: "Ohghad.org",
         location: "Ghana",
@@ -281,7 +281,7 @@ const CaseStudy = () => {
                 ].map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-cyan-200 bg-c-900/30 rounded-full"
+                    className="px-3 py-1 text-xs font-medium text-cyan-200 bg-cyan-900/50 rounded-full"
                   >
                     {tech}
                   </span>

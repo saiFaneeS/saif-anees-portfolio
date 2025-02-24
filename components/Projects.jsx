@@ -36,7 +36,7 @@ const Projects = () => {
     {
       name: "Oh GHAD! Fundraiser Site",
       description: "Non-profit fundraising platform with donation integration.",
-      image: "/new/ohghad.jpg",
+      image: "/new/ohghad1.jpg",
       url: "https://www.ohghad.org",
       slug: "/ohghad-non-profit",
       icons: "wp.svg",
