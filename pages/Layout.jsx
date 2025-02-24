@@ -5,7 +5,7 @@ import Backdrop3d from "@/components/Backdrop3d";
 
 const Layout = ({ children }) => {
   return (
-    <div className="relative">
+    <div className="relative text-foreground">
       <Head>
         <title>Saif Anees | Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/pfp.png" />

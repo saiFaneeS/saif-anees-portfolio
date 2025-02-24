@@ -14,25 +14,25 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 text-neutral-950 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 max-sm:pt-6 z-20 bg-[#cdffe8]/90 backdrop-blur-sm pb-4`}
+        className={`fixed top-0 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 max-sm:pt-6 z-20 bg-[#cdffe8]/90 backdrop-blur-sm pb-4`}
       >
         <Link
           href={"/"}
-          className="text-lg font-semibold flex gap-3 items-center shrink-0 grayscale contrast-125"
+          className="text-lg font-semibold flex gap-3 items-center shrink-0"
         >
           <Image
             src={"/pfp.jpg"}
             height={500}
             width={500}
             alt=""
-            className="w-6 aspect-square object-cover rounded-full"
+            className="w-6 aspect-square object-cover rounded-full grayscale contrast-125"
           />
           Saif Anees
         </Link>
         <div className="text-lg font-semibold flex gap-4 items-center justify-center">
           <Link
             href={"https://www.linkedin.com/in/saif-anees/"}
-            className="cursor-pointer leading-none gap-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
+            className="cursor-pointer leading-none gap-2 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/10 hover:border-cyan-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
           >
             <Linkedin size={20} />
           </Link>
