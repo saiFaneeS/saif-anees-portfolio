@@ -281,7 +281,7 @@ const CaseStudy = () => {
                 ].map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-emerald-200 bg-emerald-900/30 rounded-full"
+                    className="px-3 py-1 text-xs font-medium text-cyan-200 bg-c-900/30 rounded-full"
                   >
                     {tech}
                   </span>

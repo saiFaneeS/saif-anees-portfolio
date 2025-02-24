@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  /* outline: 1px solid red; */
-}
+/* * {
+  outline: 1px solid red;
+} */
 
 body {
-  background-color: #cdffe8;
+  background-color: #cdf1ff;
 }
 
 .text-main {
