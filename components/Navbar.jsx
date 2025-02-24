@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 text-neutral-950 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 pb-3 max-sm:pt-6 z-20`}
+        className={`fixed top-0 text-neutral-950 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 max-sm:pt-6 z-20 bg-[#cdffe8]/50 pb-4`}
       >
         <Link
           href={"/"}
