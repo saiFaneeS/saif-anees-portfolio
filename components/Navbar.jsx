@@ -25,7 +25,7 @@ const Navbar = () => {
             height={500}
             width={500}
             alt=""
-            className="w-6 aspect-square object-cover rounded-full saturate-0 contrast-125"
+            className="w-6 aspect-square object-cover rounded-full"
           />
           Saif Anees
         </Link>
