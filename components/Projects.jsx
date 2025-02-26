@@ -116,7 +116,7 @@ const Projects = () => {
                 target="_blank"
                 className=""
               >
-                <button className="text-sm group flex items-center gap-2 bg-white/80 hover:bg-cyan-100/90 text-neutral-800 hover:text-cyan-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                <button className="text-sm group flex items-center gap-2 bg-white/80 hover:bg-sky-100/90 text-neutral-800 hover:text-sky-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                   Visit Site
                   <ExternalLink
                     size={16}
@@ -173,7 +173,7 @@ const Projects = () => {
                   (prev) => (prev - 1 + projects.length) % projects.length
                 )
               }
-              className="p-2 border  hover:bg-cyan-100/50 rounded-full transition-colors"
+              className="p-2 border  hover:bg-sky-100/50 rounded-full transition-colors"
             >
               <ArrowBigUp size={22} strokeWidth={1.2} />
             </button>
@@ -181,7 +181,7 @@ const Projects = () => {
               onClick={() =>
                 setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
               }
-              className="p-2 border hover:bg-cyan-100/50 rounded-full transition-colors"
+              className="p-2 border hover:bg-sky-100/50 rounded-full transition-colors"
             >
               <ArrowBigDown size={22} strokeWidth={1.2} />
             </button>
@@ -195,8 +195,8 @@ const Projects = () => {
               onClick={() => setCurrentProjectIndex(index)}
               className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                 index === currentProjectIndex
-                  ? "bg-cyan-950 text-white"
-                  : "hover:bg-cyan-100/50"
+                  ? "bg-sky-950 text-white"
+                  : "hover:bg-sky-100/50"
               }`}
             >
               <div className="text-sm flex items-center gap-4">

@@ -71,20 +71,20 @@ export default function Hero() {
           AI Integration
         </span>
       </div>
-      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-cyan-500 drop-shadow-md max-sm:drop-shadow-sm">
+      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500  max-sm:drop-shadow-sm">
         <div>
           <h1
             className={`leading-none font-semibold flex break-words justify-start items-center text-left text-slide-in-bottom`}
           >
             ALL
-            <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-cyan-500"></div>
+            <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-sky-500"></div>
             IN
-            <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-cyan-500"></div>
+            <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-sky-500"></div>
             ONE
           </h1>
         </div>
         <div className="overflow-hidden -mr-4">
-          <h1 className="leading-none text-slide-in-bottom max-sm:break-words text-cyan-950 drop-shadow-md max-sm:drop-shadow-sm">
+          <h1 className="leading-none text-slide-in-bottom max-sm:break-words text-sky-950  max-sm:drop-shadow-sm">
             DEVELOPER
           </h1>
         </div>
@@ -93,7 +93,7 @@ export default function Hero() {
       <div>
         {/* works panel */}
         <div className="flex gap-0 sm:hidden mb-4">
-          <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-cyan-600/10 overflow-hidden">
+          <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-sky-600/10 overflow-hidden">
             {images.map((el) => {
               return (
                 <>
@@ -141,7 +141,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex w-full gap-6 max-sm:bg-cyan-400/10 max-sm:backdrop-blur-md max-sm:hover:bg-cyan-800/10 max-sm:border border-cyan-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
+        <div className="flex w-full gap-6 max-sm:bg-sky-400/10 max-sm:backdrop-blur-md max-sm:hover:bg-sky-800/10 max-sm:border border-sky-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
           <TrustIndicators />
         </div>
       </div>

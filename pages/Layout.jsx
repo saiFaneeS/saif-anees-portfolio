@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Navbar from "@/components/Navbar";
 import Backdrop3d from "@/components/Backdrop3d";
+import { Analytics } from "@vercel/analytics/react";
 
 const Layout = ({ children }) => {
   return (
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
       <Navbar />
       <Backdrop3d />
       <div>{children}</div>
+      <Analytics />
     </div>
   );
 };

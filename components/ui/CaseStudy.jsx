@@ -237,7 +237,7 @@ const CaseStudy = () => {
     purple: "border-violet-500/80",
     red: "border-red-500/80",
     amber: "border-amber-500/80",
-    cyan: "border-cyan-500/80",
+    cyan: "border-sky-500/80",
   };
 
   return (
@@ -267,7 +267,7 @@ const CaseStudy = () => {
           {...fadeIn}
           className="mb-8 grid grid-cols-2 gap-6 max-lg:grid-cols-1"
         >
-          <div className="bg-cyan-950 text-background rounded-lg p-8 relative overflow-hidden">
+          <div className="bg-sky-950 text-background rounded-lg p-8 relative overflow-hidden">
             <div
               className={`h-60 aspect-square rounded-full border-[24px] ${
                 colorClasses[project.color]
@@ -281,7 +281,7 @@ const CaseStudy = () => {
                 ].map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-cyan-200 bg-cyan-900/50 rounded-full"
+                    className="px-3 py-1 text-xs font-medium text-sky-200 bg-sky-900/50 rounded-full"
                   >
                     {tech}
                   </span>
@@ -293,13 +293,13 @@ const CaseStudy = () => {
             </h1>
             <p className=" leading-relaxed">{project.description}</p>
             {/* Objectives */}
-            <motion.section {...fadeIn} className="mt-8 text-cyan-50 ">
+            <motion.section {...fadeIn} className="mt-8 text-sky-50 ">
               <div>
                 <h2 className="text-lg font-semibold mt-2 mb-4">Objectives</h2>
                 <ul className="space-y-4">
                   {project.objectives?.map((objective, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="w-1.5 h-0.5 rounded-full bg-cyan-50 mt-2.5 shrink-0" />
+                      <span className="w-1.5 h-0.5 rounded-full bg-sky-50 mt-2.5 shrink-0" />
                       <span>{objective}</span>
                     </li>
                   ))}
@@ -383,7 +383,7 @@ const CaseStudy = () => {
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 p-3 px-4 bg-cyan-600/20 rounded-sm border border-cyan-600/20 text-sm"
+                    className="flex items-center gap-2 p-3 px-4 bg-sky-600/20 rounded-sm border border-sky-600/20 text-sm"
                   >
                     <Asterisk
                       strokeWidth={1.5}

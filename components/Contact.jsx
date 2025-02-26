@@ -46,7 +46,7 @@ const Contact = () => {
 
         <div className="space-y-12">
           <div className="group">
-            <p className="text-sm font-semibold textcyan600 mb-2 tracking-wider">
+            <p className="text-sm font-semibold text-sky-600 mb-2 tracking-wider">
               MAIL
             </p>
             <Link
@@ -62,7 +62,7 @@ const Contact = () => {
           </div>
 
           <div>
-            <p className="text-sm font-semibold textcyan600 mb-4 tracking-wider">
+            <p className="text-sm font-semibold text-sky-600 mb-4 tracking-wider">
               SOCIAL MEDIA
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-2">
@@ -71,9 +71,9 @@ const Contact = () => {
                   key={index}
                   target="_blank"
                   href={link.url}
-                  className="group flex items-center gap-3 p-4 rounded-sm border border-neutral-800/10 bgcyan100/50 hover:bgcyan800/80 hover:textcyan50 transition-all"
+                  className="group flex items-center gap-3 p-4 rounded-sm border border-neutral-800/10 bg-sky-100/50 hover:bg-sky-800/80 hover:text-sky-50 transition-all"
                 >
-                  <span className="text-gray-900 group-hover:textcyan100 transition-colors">
+                  <span className="text-gray-900 group-hover:text-sky-100 transition-colors">
                     {link.icon}
                   </span>
                   <span className="font-medium group-hover:translate-x-1 transition-transform">
@@ -81,7 +81,7 @@ const Contact = () => {
                   </span>
                   <ArrowUpRightFromCircle
                     size={16}
-                    className="ml-auto textcyan950 group-hover:textcyan100 transition-opacity"
+                    className="ml-auto text-sky-950 group-hover:text-sky-100 transition-opacity"
                   />
                 </Link>
               ))}
