@@ -14,16 +14,6 @@ import {
 const Projects = () => {
   const projects = [
     {
-      name: "MS Real Estate LLC",
-      description: "Luxury real estate platform for property listings.",
-      image: "/new/ms_re.jpg",
-      url: "https://www.msrealestate.ae",
-      slug: "/ms-real-estate",
-      icons: "nextdotjs-color.svg",
-      year: "2024",
-      tags: ["Next.js", "Tailwind", "API Integration", "CMS"],
-    },
-    {
       name: "Noblesoft Agency",
       description: "Digital agency website with modern design and animations.",
       image: "/new/noblesoft.jpg",
@@ -32,6 +22,16 @@ const Projects = () => {
       icons: "nextdotjs-color.svg",
       year: "2023",
       tags: ["Next.js", "Tailwind", "Framer Motion"],
+    },
+    {
+      name: "MS Real Estate LLC",
+      description: "Luxury real estate platform for property listings.",
+      image: "/new/ms_re.jpg",
+      url: "https://www.msrealestate.ae",
+      slug: "/ms-real-estate",
+      icons: "nextdotjs-color.svg",
+      year: "2024",
+      tags: ["Next.js", "Tailwind", "API Integration", "CMS"],
     },
     {
       name: "Oh GHAD! Fundraiser Site",
@@ -68,25 +68,25 @@ const Projects = () => {
   const { isActive, pageChanged, setPageChanged } = useNavbar();
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  useEffect(() => {
-    setPageChanged(false);
-    setIsImageLoaded(false);
+  // useEffect(() => {
+  //   setPageChanged(false);
+  //   setIsImageLoaded(false);
 
-    const handleKeyDown = (e) => {
-      if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
-        setCurrentProjectIndex(
-          (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
-        );
-      } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
-        setCurrentProjectIndex(
-          (prevIndex) => (prevIndex + 1) % projects.length
-        );
-      }
-    };
+  //   const handleKeyDown = (e) => {
+  //     if (e.key === "ArrowUp" || e.key === "ArrowLeft") {
+  //       setCurrentProjectIndex(
+  //         (prevIndex) => (prevIndex - 1 + projects.length) % projects.length
+  //       );
+  //     } else if (e.key === "ArrowDown" || e.key === "ArrowRight") {
+  //       setCurrentProjectIndex(
+  //         (prevIndex) => (prevIndex + 1) % projects.length
+  //       );
+  //     }
+  //   };
 
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+  //   window.addEventListener("keydown", handleKeyDown);
+  //   return () => window.removeEventListener("keydown", handleKeyDown);
+  // }, []);
 
   return (
     <div
@@ -116,7 +116,7 @@ const Projects = () => {
                 target="_blank"
                 className=""
               >
-                <button className="text-sm group flex items-center gap-2 bg-white/80 hover:bg-sky-100/90 text-neutral-800 hover:text-sky-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                <button className="text-sm group flex items-center gap-2 bg-sky-50/80 hover:bg-sky-100/90 text-sky-900 hover:text-sky-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                   Visit Site
                   <ExternalLink
                     size={16}
@@ -130,7 +130,7 @@ const Projects = () => {
                 href={`/case-study${projects[currentProjectIndex]?.slug}`}
                 className=""
               >
-                <button className="text-sm group flex items-center gap-2 bg-amber-50/80 hover:bg-amber-50/90 text-amber-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                <button className="text-sm group flex items-center gap-2 bg-violet-50/80 hover:bg-violet-100/90 text-violet-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                   Case Study
                   <ExternalLink
                     size={16}
@@ -173,7 +173,7 @@ const Projects = () => {
                   (prev) => (prev - 1 + projects.length) % projects.length
                 )
               }
-              className="p-2 border  hover:bg-sky-100/50 rounded-full transition-colors"
+              className="p-2 border-2 border-sky-950/10 hover:bg-sky-900/5 rounded-full transition-colors"
             >
               <ArrowBigUp size={22} strokeWidth={1.2} />
             </button>
@@ -181,14 +181,14 @@ const Projects = () => {
               onClick={() =>
                 setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
               }
-              className="p-2 border hover:bg-sky-100/50 rounded-full transition-colors"
+              className="p-2 border-2 border-sky-950/10 hover:bg-sky-900/5 rounded-full transition-colors"
             >
               <ArrowBigDown size={22} strokeWidth={1.2} />
             </button>
           </div>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 border-4 border-sky-900/20 backdrop-blur-xl bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
           {projects.map((project, index) => (
             <button
               key={index}
@@ -196,7 +196,7 @@ const Projects = () => {
               className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                 index === currentProjectIndex
                   ? "bg-sky-950 text-white"
-                  : "hover:bg-sky-100/50"
+                  : "hover:bg-sky-900/10"
               }`}
             >
               <div className="text-sm flex items-center gap-4">
