@@ -8,6 +8,9 @@ export default function Home() {
   return (
     <Layout>
       <Hero />
+      <Projects />
+      <About />
+      <Contact />
     </Layout>
   );
 }

@@ -36,16 +36,16 @@ const Navbar = () => {
           >
             <Linkedin size={20} />
           </Link>
-          <div
+          {/* <div
             className="cursor-pointer leading-none gap-2 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/10 hover:border-sky-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
             onClick={() => setIsActive(!isActive)}
           >
             <Menu size={24} strokeWidth={2} />
             <p className="max-sm:hidden">MENU</p>
-          </div>
+          </div> */}
         </div>
       </div>
-      <div
+      {/* <div
         className={`h-screen backdrop-blur-sm w-full fixed left-0 flex flex-col justify-center px-[25%] py-4 z-10 transition-all delay-75 duration-1000 ${
           isActive ? "top-0" : "top-[-140%]"
         }`}
@@ -118,7 +118,7 @@ const Navbar = () => {
             Whatsapp
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
