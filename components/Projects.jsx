@@ -109,7 +109,7 @@ const Projects = () => {
               }`}
             />
           )}{" "}
-          <div className="absolute bottom-4 left-4 z-20 flex gap-2 items-center flex-wrap">
+          <div className="absolute bottom-4 left-4 z-10 flex gap-2 items-center flex-wrap">
             {projects[currentProjectIndex]?.url && (
               <Link
                 href={projects[currentProjectIndex]?.url}
