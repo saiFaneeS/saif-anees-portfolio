@@ -173,7 +173,7 @@ const Projects = () => {
                   (prev) => (prev - 1 + projects.length) % projects.length
                 )
               }
-              className="p-2 border-2 border-sky-950/10 hover:bg-sky-900/5 rounded-full transition-colors"
+              className="p-2 border-2 border-sky-950/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors"
             >
               <ArrowBigUp size={22} strokeWidth={1.2} />
             </button>
@@ -181,14 +181,14 @@ const Projects = () => {
               onClick={() =>
                 setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
               }
-              className="p-2 border-2 border-sky-950/10 hover:bg-sky-900/5 rounded-full transition-colors"
+              className="p-2 border-2 border-sky-950/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors"
             >
               <ArrowBigDown size={22} strokeWidth={1.2} />
             </button>
           </div>
         </div>
 
-        <div className="space-y-2 border-4 border-sky-900/20 backdrop-blur-xl bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
+        <div className="space-y-2 border-[3px] border-sky-900/20 backdrop-blur-xl bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
           {projects.map((project, index) => (
             <button
               key={index}

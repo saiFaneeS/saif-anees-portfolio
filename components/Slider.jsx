@@ -9,7 +9,7 @@ const Slider = () => {
 
   return (
     <div
-      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-4 border-sky-900/20 backdrop-blur-xl bg-sky-800/[5%] hover:bg-sky-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}
+      className={`relative flex items-center max-sm:py-2 py-3 shadow-lg gap-16 md:gap-28 border-[3px] border-sky-900/20 backdrop-blur-xl bg-sky-800/[5%] hover:bg-sky-800//[7%] overflow-clip rounded-md max-sm:hidden transition-all group`}
     >
       {" "}
       {/* Slider Wrapper */}
