@@ -252,3 +252,20 @@ body {
     rgba(31, 129, 149, 0) 100%
   );
 }
+
+/* Minimal dark scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #333; /* Dark track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666; /* Slightly lighter thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Slightly lighter on hover */
+}

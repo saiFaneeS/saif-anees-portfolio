@@ -19,11 +19,11 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`absolute top-0 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 max-sm:pt-6 z-20 bg-[#cdf1ff]/90 backdrop-blur-sm pb-4`}
+        className={`absolute top-0 w-full flex gap-4 items-start justify-between px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-4 max-sm:pt-4 z-20 sm:h-32`}
       >
         <Link
           href={"/"}
-          className="text-lg font-semibold flex gap-3 items-center shrink-0"
+          className="text-lg font-medium flex gap-3 items-center shrink-0 sm:sticky top-4"
         >
           {/* <Image
             src={"/pfp.jpg"}
@@ -34,7 +34,7 @@ const Navbar = () => {
           /> */}
           Saif Anees
         </Link>
-        <div className="text-lg font-semibold flex gap-4 items-center justify-center">
+        <div className="text-lg font-semibold flex gap-4 items-center justify-center sm:sticky top-4">
           <Link
             href={"mailto:saifanees11@gmail.com"}
             className="text-sm font-medium flex gap-4 items-center justify-center bg-sky-950 text-sky-50 px-12 py-1 rounded-sm border border-sky-950 hover:bg-transparent hover:text-sky-950"

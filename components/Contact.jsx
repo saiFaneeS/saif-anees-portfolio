@@ -36,17 +36,16 @@ const Contact = () => {
 
   return (
     <div
-      className={`min-h-screen flex items-center relative w-full px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-16 ${
+      className={`min-h-screen flex items-center relative w-full px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:py-16 ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="w-full lg:w-4/5">
-        <h2 className="text-2xl font-semibold mb-2">Contact</h2>
-        <div className="h-[2px] shrink-0 w-full bg-current mb-12"></div>
+      <div className="w-full">
+        <h2 className="text-2xl font-semibold mb-2 border-b-2 border-dashed border-b-sky-900 pb-4">Contact</h2>
 
         <div className="space-y-12">
           <div className="group">
-            <p className="text-sm font-semibold text-sky-600 mb-2 tracking-wider">
+            <p className="text-sm font-semibold text-sky-600 mb-2 tracking-wider pt-6">
               MAIL
             </p>
             <Link

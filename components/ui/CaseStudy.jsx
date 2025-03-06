@@ -243,7 +243,7 @@ const CaseStudy = () => {
   return (
     <>
       <div
-        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 py-24 max-sm:py-8 ${
+        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:py-8 ${
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >

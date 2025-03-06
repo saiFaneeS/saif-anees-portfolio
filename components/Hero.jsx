@@ -8,7 +8,7 @@ import Slider from "./Slider";
 import Backdrop3d from "./Backdrop3d";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 
 export default function Hero() {
   const { isActive, pageChanged, setPageChanged } = useNavbar();
@@ -29,10 +29,20 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-x-hidden text-slate-950 max-sm:h-[88vh] flex flex-col justify-center gap-8 px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-24 w-full lg:overflow-hidden lg:h-screen ${
-        isActive ? "slide-out-top" : "slide-in-bottom"
-      } ${pageChanged ? "hidden" : ""}`}
+      className={`h-screen overflow-x-hidden bg-sky-50/60 relative z-0 text-slate-950 max-sm:h-[88vh] flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 w-full lg:overflow-hidden lg:h-screen`}
     >
+      <div className="h-screen w-full absolute top-0 left-0 -z-10 bg-sky-100">
+        {/* <Image
+          src={"/bg2.png"}
+          className="h-full w-full opacity-10 grayscale"
+          width={1000}
+          height={1000}
+          alt=""
+        />{" "} */}
+      </div>
+      <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
+        EXPLORE <ArrowDown size={12} />
+      </div>
       <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
           Apps
@@ -89,7 +99,6 @@ export default function Hero() {
           </h1>
         </div>
       </div>
-
       <div>
         {/* works panel */}
         <div className="flex gap-0 sm:hidden mb-4">
@@ -145,7 +154,6 @@ export default function Hero() {
           <TrustIndicators />
         </div>
       </div>
-
       <Slider />
     </div>
   );
