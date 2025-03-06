@@ -1,5 +1,10 @@
 import { useNavbar } from "@/context/Navbar";
-import { ArrowUpRightFromCircle, Linkedin, Menu } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRightFromCircle,
+  Linkedin,
+  Menu,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -14,28 +19,34 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`fixed top-0 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 max-sm:pt-6 z-20 bg-[#cdf1ff]/90 backdrop-blur-sm pb-4`}
+        className={`absolute top-0 w-full flex gap-4 items-center justify-between px-24 max-lg:px-16 max-md:px-12 max-sm:px-4 pt-12 max-md:pt-10 max-sm:pt-6 z-20 bg-[#cdf1ff]/90 backdrop-blur-sm pb-4`}
       >
         <Link
           href={"/"}
           className="text-lg font-semibold flex gap-3 items-center shrink-0"
         >
-          <Image
+          {/* <Image
             src={"/pfp.jpg"}
             height={500}
             width={500}
             alt=""
             className="w-6 aspect-square object-cover rounded-full"
-          />
+          /> */}
           Saif Anees
         </Link>
         <div className="text-lg font-semibold flex gap-4 items-center justify-center">
           <Link
+            href={"mailto:saifanees11@gmail.com"}
+            className="text-sm font-medium flex gap-4 items-center justify-center bg-sky-950 text-sky-50 px-12 py-1 rounded-sm border border-sky-950 hover:bg-transparent hover:text-sky-950"
+          >
+            LET&apos;S TALK <ArrowRight size={14} />
+          </Link>
+          {/* <Link
             href={"https://www.linkedin.com/in/saif-anees/"}
             className="cursor-pointer leading-none gap-2 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/10 hover:border-sky-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
           >
             <Linkedin size={20} />
-          </Link>
+          </Link> */}
           {/* <div
             className="cursor-pointer leading-none gap-2 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/10 hover:border-sky-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
             onClick={() => setIsActive(!isActive)}
