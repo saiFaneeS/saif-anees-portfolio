@@ -68,13 +68,25 @@ const Projects = () => {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [initialY, setInitialY] = useState(400);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setInitialY(window.innerWidth < 768 ? 50 : 400);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const section = document.getElementById("slide-in-section");
       if (section) {
         const rect = section.getBoundingClientRect();
-        if (rect.bottom * 0.8 <= window.innerHeight) {
+        if (rect.bottom * 0.6 <= window.innerHeight) {
           setIsVisible(true);
         }
       }
@@ -87,7 +99,7 @@ const Projects = () => {
   return (
     <div id="slide-in-section">
       <motion.div
-        initial={{ y: 500 }}
+        initial={{ y: initialY }}
         animate={isVisible ? { y: 0 } : {}}
         transition={{
           duration: 0.6,

@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
         EXPLORE <ArrowDown size={12} />
       </div>
-      <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap text-slide-in-bottom">
+      <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
         <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
           Apps
         </span>
@@ -84,7 +84,7 @@ export default function Hero() {
       <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500">
         <div>
           <h1
-            className={`leading-none font-semibold flex break-words justify-start items-center text-left text-slide-in-bottom`}
+            className={`leading-none font-semibold flex break-words justify-start items-center text-left`}
           >
             ALL
             <div className="min-w-4 max-w-20 flex-1 mx-2 sm:mx-3 h-2 max-sm:h-1 inline-block bg-sky-500"></div>
