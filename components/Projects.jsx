@@ -107,7 +107,7 @@ const Projects = () => {
           damping: 10,
           stiffness: 100,
         }}
-        className={`min-h-screen flex max-md:flex-col justify-center items-center max-md:items-start gap-12 max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full`}
+        className={`min-h-screen bg-sky-100/80 flex max-md:flex-col justify-center items-center max-md:items-start gap-12 max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full`}
       >
         <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6">
           <div className="h-60 aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">
@@ -205,7 +205,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="space-y-2 border-[3px] border-sky-900/20 backdrop-blur-md bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
+          <div className="space-y-2 border-[3px] border-sky-900/20 bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
             {projects.map((project, index) => (
               <button
                 key={index}

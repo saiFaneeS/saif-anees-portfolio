@@ -31,15 +31,6 @@ export default function Hero() {
     <div
       className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 max-sm:gap-12 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 max-sm:pt-12 w-full lg:overflow-hidden lg:h-screen`}
     >
-      <div className="h-screen w-full absolute top-0 left-0 -z-10 bg-sky-200">
-        {/* <Image
-          src={"/bg2.png"}
-          className="h-full w-full opacity-10 grayscale"
-          width={1000}
-          height={1000}
-          alt=""
-        />{" "} */}
-      </div>
       <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
         EXPLORE <ArrowDown size={12} />
       </div>
