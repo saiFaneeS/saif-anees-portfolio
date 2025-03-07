@@ -1,14 +1,32 @@
-import { useNavbar } from "@/context/Navbar";
-import {
-  ArrowRight,
-  ArrowUpRightFromCircle,
-  Linkedin,
-  Menu,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
+import { Link as ScrollLink, scroller } from "react-scroll";
 
 const Navbar = () => {
+  const router = useRouter();
+
+  const scrollToSection = (sectionId) => {
+    if (router.pathname !== "/") {
+      router.push(`/?scrollTo=${sectionId}`).then(() => {
+        scroller.scrollTo(sectionId, {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+          offset: -50,
+        });
+      });
+    } else {
+      scroller.scrollTo(sectionId, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }
+  };
+
   return (
     <>
       <div
@@ -27,13 +45,14 @@ const Navbar = () => {
           /> */}
           Saif Anees
         </Link>
-        <div className="text-lg font-semibold flex gap-4 items-center justify-center sm:sticky top-4 pointer-events-auto">
-          <Link
-            href={"mailto:saifanees11@gmail.com"}
-            className="text-sm font-normal tracking-wide flex gap-4 items-center justify-center bg-foreground text-sky-50 px-12 py-1 rounded-sm border border-foreground hover:bg-transparent hover:text-foreground"
+        <div className="text-lg font-semibold flex gap-4 items-center justify-center sm:sticky top-4 z-50 pointer-events-auto">
+          <ScrollLink
+            to="contact-section"
+            onClick={() => scrollToSection("contact-section")}
+            className="text-sm font-normal tracking-wide flex gap-4 items-center justify-center bg-foreground text-sky-50 px-12 py-1 rounded-sm border border-foreground hover:bg-transparent hover:text-foreground cursor-pointer"
           >
             LET&apos;S TALK <ArrowRight size={14} />
-          </Link>
+          </ScrollLink>
         </div>
       </div>
     </>

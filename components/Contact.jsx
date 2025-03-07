@@ -67,7 +67,7 @@ const ContactPage = () => {
       <div className="grid lg:grid-cols-5 gap-8 items-center w-full">
         <div className="lg:col-span-2 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 mb-8">
           <div className="border-b border-dashed border-sky-100 pb-8 mb-8">
-            <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-sky-50/80 mb-2">
+            <span className="contact-section inline-block px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-sky-50/80 mb-2">
               Contact
             </span>
             <h1 className="text-2xl font-semibold animate-in fade-in slide-in-from-bottom-8 duration-700 text-white">

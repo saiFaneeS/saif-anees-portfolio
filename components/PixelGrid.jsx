@@ -38,7 +38,7 @@ export default function PixelGrid() {
           return (
             <motion.div
               key={index}
-              className="bg-foreground w-[14%] h-[10%] sm:rounded-sm sm:scale-[103%]"
+              className="bg-foreground w-[14%] h-[10%] sm:rounded-[3px] sm:scale-[103%]"
               style={{
                 position: "absolute",
                 top: `${(y / rows) * 100}%`,
