@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Backdrop3d from "@/components/Backdrop3d";
 import { Analytics } from "@vercel/analytics/react";
 import Lenis from "lenis";
+import PixelGrid from "@/components/PixelGrid";
 
 const Layout = ({ children }) => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const Layout = ({ children }) => {
         <title>Saif Anees | Portfolio</title>
         <link rel="icon" type="image/x-icon" href="/pfp.jpg" />
       </Head>
+      <PixelGrid />
       <Navbar />
       <Backdrop3d />
       <div>{children}</div>

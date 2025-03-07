@@ -29,9 +29,9 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-hidden bg-sky-50/60 relative z-0 text-sky-950 flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 w-full lg:overflow-hidden lg:h-screen`}
+      className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 w-full lg:overflow-hidden lg:h-screen`}
     >
-      <div className="h-screen w-full absolute top-0 left-0 -z-10 bg-sky-100">
+      <div className="h-screen w-full absolute top-0 left-0 -z-10 bg-sky-200">
         {/* <Image
           src={"/bg2.png"}
           className="h-full w-full opacity-10 grayscale"
@@ -94,7 +94,7 @@ export default function Hero() {
           </h1>
         </div>
         <div className="overflow-hidden -mr-4">
-          <h1 className="leading-none max-sm:break-words text-sky-950">
+          <h1 className="leading-none max-sm:break-words text-foreground">
             DEVELOPER
           </h1>
         </div>

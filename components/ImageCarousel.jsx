@@ -12,7 +12,7 @@ import Image from "next/image";
 export function ImageCarousel({ images }) {
   return (
     <Carousel
-      className="w-full border border-blue-500 backdrop-blur-md rounded-md"
+      className="w-full border border-sky-500 backdrop-blur-md rounded-md"
       opts={{
         loop: true,
       }}
