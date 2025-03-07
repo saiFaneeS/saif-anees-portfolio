@@ -97,7 +97,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div id="slide-in-section" className="sticky top-0">
+    <div id="slide-in-section" className="sm:sticky top-0">
       <motion.div
         initial={{ y: initialY }}
         animate={isVisible ? { y: 0 } : {}}
