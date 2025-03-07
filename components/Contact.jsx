@@ -1,88 +1,107 @@
-import React from "react";
-import Link from "next/link";
+import React, { useEffect } from "react";
 import {
-  ArrowUpRightFromCircle,
   Mail,
   Linkedin,
   Instagram,
   MessageCircle,
+  ArrowUpRight,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const Contact = () => {
+const SocialLink = ({ name, url, icon }) => {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-between p-4  bg-black/5 backdrop-blur-sm border border-white/10 hover:bg-black/10 transition-all duration-300 group"
+    >
+      <div className="flex items-center gap-3">
+        <div className="p-2 rounded-full bg-white/10">{icon}</div>
+        <span className="font-medium">{name}</span>
+      </div>
+      <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+    </a>
+  );
+};
+
+const ContactPage = () => {
   const socialLinks = [
     {
-      name: "Linkedin",
-      url: "https://www.linkedin.com/in/saif-anees/?originalSubdomain=pk",
-      icon: <Linkedin size={20} />,
+      name: "Email",
+      url: "mailto:saifanees11@gmail.com",
+      icon: <Mail className="w-5 h-5" />,
     },
     {
-      name: "Instagram",
-      url: "https://www.instagram.com/saifullah_anees/",
-      icon: <Instagram size={20} />,
-    },
-    {
-      name: "Whatsapp",
+      name: "WhatsApp",
       url: "https://wa.me/+9203283490764",
-      icon: <MessageCircle size={20} />,
+      icon: <MessageCircle className="w-5 h-5" />,
+    },
+    // {
+    //   name: "Instagram",
+    //   url: "https://www.instagram.com/saifullah_anees/",
+    //   icon: <Instagram className="w-5 h-5" />,
+    // },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/saif-anees",
+      icon: <Linkedin className="w-5 h-5" />,
     },
   ];
 
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
-    <div
-      className={`min-h-screen bg-foreground text-sky-50 flex items-center relative w-full px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:py-16`}
-    >
-      <div className="w-full">
-        <h2 className="text-2xl font-semibold mb-2 border-b-2 border-dashed border-b-sky-50 pb-4">
-          Contact
-        </h2>
-
-        <div className="space-y-12">
-          <div className="group">
-            <p className="text-sm font-semibold text-sky-600 mb-2 tracking-wider pt-6">
-              MAIL
+    <div className="min-h-screen lg:h-screen bg-sky-950 text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
+      <div className="grid lg:grid-cols-5 gap-8 items-center">
+        <div className="lg:col-span-2 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 mb-8">
+          <div className="border-b border-dashed border-sky-100 pb-8 mb-8">
+            <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-sky-50/80 mb-2">
+              Contact
+            </span>
+            <h1 className="text-2xl font-semibold animate-in fade-in slide-in-from-bottom-8 duration-700 text-white">
+              Let's Talk
+            </h1>
+            <p className="text-sm text-sky-50/70 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+              Schedule a meeting or connect with me through any of the channels
+              below.
             </p>
-            <Link
-              href="mailto:saifanees11@gmail.com"
-              className="inline-flex items-center gap-3 text-base font-medium hover:text-sky-100 transition-colors"
-            >
-              <Mail
-                size={24}
-                className="group-hover:rotate-12 transition-transform"
+          </div>
+          <div className="space-y-4">
+            {socialLinks.map((link, index) => (
+              <SocialLink
+                key={link.name}
+                name={link.name}
+                url={link.url}
+                icon={link.icon}
               />
-              saifanees11@gmail.com
-            </Link>
+            ))}
           </div>
+        </div>
 
-          <div>
-            <p className="text-sm font-semibold text-sky-600 mb-4 tracking-wider">
-              SOCIAL MEDIA
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 gap-y-2">
-              {socialLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  target="_blank"
-                  href={link.url}
-                  className="group flex items-center gap-3 p-4 rounded-sm border border-neutral-800/10 bg-sky-100/20 hover:bg-sky-800/80 hover:text-sky-50 transition-all"
-                >
-                  <span className="group-hover:text-sky-100 transition-colors">
-                    {link.icon}
-                  </span>
-                  <span className="font-medium group-hover:translate-x-1 transition-transform">
-                    {link.name}
-                  </span>
-                  <ArrowUpRightFromCircle
-                    size={16}
-                    className="ml-auto text-sky-50 group-hover:text-sky-100 transition-opacity"
-                  />
-                </Link>
-              ))}
-            </div>
-          </div>
+        <div className="lg:col-span-3 rounded-lg relative overflow-hidden border border-white/10 bg-white/5 shadow-xl h-[80vh] animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400">
+          <iframe
+            src="https://calendly.com/saifanees11/saifanees"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title="Select a Date & Time - Calendly"
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default Contact;
+export default ContactPage;
