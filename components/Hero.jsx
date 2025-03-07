@@ -141,7 +141,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex sm:hidden w-full gap-6 transition-all">
+        <div className="flex sm:hidden bg-transparent w-full gap-6 transition-all">
           <TrustIndicators />
         </div>
       </div>
