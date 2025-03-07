@@ -37,9 +37,9 @@ const About = () => {
 
   return (
     <div
-      className={`overflow-x-hidden overflow-y-auto relative flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:pt-20 max-sm:py-16`}
+      className={`overflow-x-hidden overflow-y-auto sticky top-0 flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:pt-20 max-sm:py-16`}
     >
-      <div className="bg-sky-200/80 backdrop-blur-sm h-full w-full absolute top-0 left-0 z-0"></div>
+      <div className="bg-sky-200 h-full w-full absolute top-0 left-0 z-0"></div>
       <div className="w-full flex flex-col justify-center relative z-10">
         <h2 className="text-2xl font-semibold mb-2 h-full border-b-2 border-dashed border-b-sky-900 pb-4">
           About

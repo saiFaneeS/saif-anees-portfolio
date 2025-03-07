@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import {
   ArrowUpRightFromCircle,
@@ -7,11 +7,8 @@ import {
   Instagram,
   MessageCircle,
 } from "lucide-react";
-import { useNavbar } from "@/context/Navbar";
 
 const Contact = () => {
-  const { isActive, pageChanged, setPageChanged } = useNavbar();
-
   const socialLinks = [
     {
       name: "Linkedin",
@@ -29,10 +26,6 @@ const Contact = () => {
       icon: <MessageCircle size={20} />,
     },
   ];
-
-  useEffect(() => {
-    setPageChanged(false);
-  }, []);
 
   return (
     <div
