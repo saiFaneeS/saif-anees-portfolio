@@ -45,17 +45,15 @@ const About = () => {
           About
         </h2>
 
-        <p className="text-base text-gray-700 leading-relaxed pt-4">
-          Hi, I&apos;m Saif. I&apos;m passionate about all sorts of creativity.
-          I&apos;ve been designing and creating art since my early teens and
-          started programming to bring lively interactions and functionalities
-          to my designs. Now, I combine these passions and have my primary focus
-          on building Websites & Apps.
+        <p className="text-base text-gray-700 leading-relaxed pt-4 max-w-6xl">
+          Hi, I&apos;m Saif! I love all things creative. I&apos;ve been
+          designing since my early teens and picked up programming to add life
+          to my work. Now, I focus on building Websites & Apps.
         </p>
-        <p className="text-base text-gray-700 leading-relaxed mb-6 pt-4">
-          I have experience in working with small to medium-sized businesses
-          with consistent positive client satisfaction. When I&apos;m not
-          building, I&apos;m learning new stuff.
+        <p className="text-base text-gray-700 leading-relaxed mb-6 pt-4 max-w-6xl">
+          I&apos;ve worked with small to medium businesses, always ensuring
+          client satisfaction. When I&apos;m not building, I&apos;m learning
+          some new stuff!
         </p>
 
         <div className="space-y-8">
