@@ -107,9 +107,9 @@ const Projects = () => {
           damping: 10,
           stiffness: 100,
         }}
-        className={`min-h-screen bg-sky-100/80 flex max-md:flex-col justify-center items-center max-md:items-start gap-12 max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full`}
+        className={`min-h-screen bg-sky-100/80 flex max-md:flex-col justify-center items-center max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-md:pt-36 max-sm:py-16 max-sm:pt-20 relative w-full`}
       >
-        <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6">
+        <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6 max-sm:gap-4">
           <div className="h-60 aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-10" />
             {projects[currentProjectIndex]?.image && (
@@ -159,7 +159,7 @@ const Projects = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-base font-semibold mb-2">
+            <h3 className="text-base font-semibold mb-2 max-sm:hidden">
               {projects[currentProjectIndex]?.name}
             </h3>
             <p className="text-neutral-800 text-sm line-clamp-1 mb-4">
@@ -181,7 +181,7 @@ const Projects = () => {
         <div className="h-[1px] w-full bg-neutral-900/15 sm:hidden"></div>
 
         <div className="flex flex-col w-full">
-          <div className="flex gap-6 justify-between items-center mb-6">
+          <div className="flex gap-6 justify-between items-center mb-6 max-sm:mb-4">
             <h2 className="text-xl font-semibold">Works</h2>
             <div className="flex gap-2">
               <button
@@ -190,7 +190,7 @@ const Projects = () => {
                     (prev) => (prev - 1 + projects.length) % projects.length
                   )
                 }
-                className="p-2 border-2 border-foreground/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors"
+                className="p-2 border-2 border-foreground/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
               >
                 <ArrowBigUp size={22} strokeWidth={1.2} />
               </button>
@@ -198,7 +198,7 @@ const Projects = () => {
                 onClick={() =>
                   setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
                 }
-                className="p-2 border-2 border-foreground/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors"
+                className="p-2 border-2 border-foreground/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
               >
                 <ArrowBigDown size={22} strokeWidth={1.2} />
               </button>
