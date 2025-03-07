@@ -64,7 +64,7 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen lg:h-screen bg-sky-950 text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
-      <div className="grid lg:grid-cols-5 gap-8 items-center">
+      <div className="grid lg:grid-cols-5 gap-8 items-center w-full">
         <div className="lg:col-span-2 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 mb-8">
           <div className="border-b border-dashed border-sky-100 pb-8 mb-8">
             <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-sky-50/80 mb-2">
@@ -90,7 +90,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-3 rounded-lg relative overflow-hidden border border-white/10 bg-white/5 shadow-xl h-[80vh] animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400">
+        <div className="lg:col-span-3 rounded-lg relative overflow-hidden border border-white/10 shadow-xl h-[80vh] animate-in fade-in slide-in-from-bottom-8 duration-700 delay-400 backdropinvert">
           <iframe
             src="https://calendly.com/saifanees11/saifanees"
             width="100%"
