@@ -133,7 +133,7 @@ const Projects = () => {
                   target="_blank"
                   className=""
                 >
-                  <button className="text-sm group flex items-center gap-2 bg-sky-50/80 hover:bg-sky-100/90 text-sky-900 hover:text-sky-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                  <button className="text-sm group flex items-center gap-2 bg-blue-50/80 hover:bg-blue-100/90 text-blue-900 hover:text-blue-900 px-4 py-1.5 rounded-sm font-medium transition-all">
                     Visit Site
                     <ExternalLink
                       size={16}
@@ -190,7 +190,7 @@ const Projects = () => {
                     (prev) => (prev - 1 + projects.length) % projects.length
                   )
                 }
-                className="p-2 border-2 border-sky-950/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors"
+                className="p-2 border-2 border-blue-950/10 bg-blue-900/5 hover:bg-blue-900/15 rounded-full transition-colors"
               >
                 <ArrowBigUp size={22} strokeWidth={1.2} />
               </button>
@@ -198,22 +198,22 @@ const Projects = () => {
                 onClick={() =>
                   setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
                 }
-                className="p-2 border-2 border-sky-950/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors"
+                className="p-2 border-2 border-blue-950/10 bg-blue-900/5 hover:bg-blue-900/15 rounded-full transition-colors"
               >
                 <ArrowBigDown size={22} strokeWidth={1.2} />
               </button>
             </div>
           </div>
 
-          <div className="space-y-2 border-[3px] border-sky-900/20 backdrop-blur-md bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
+          <div className="space-y-2 border-[3px] border-blue-900/20 backdrop-blur-md bg-blue-800/[5%] p-2 rounded-md overflow-hidden">
             {projects.map((project, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentProjectIndex(index)}
                 className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                   index === currentProjectIndex
-                    ? "bg-sky-950 text-white"
-                    : "hover:bg-sky-900/10"
+                    ? "bg-blue-950 text-white"
+                    : "hover:bg-blue-900/10"
                 }`}
               >
                 <div className="text-sm flex items-center gap-4">

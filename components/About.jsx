@@ -41,15 +41,23 @@ const About = () => {
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
-      <div className="bg-sky-200/80 backdrop-blur-sm h-full w-full absolute top-0 left-0 z-0"></div>
+      <div className="bg-blue-200/80 backdrop-blur-sm h-full w-full absolute top-0 left-0 z-0"></div>
       <div className="w-full flex flex-col justify-center relative z-10">
-        <h2 className="text-2xl font-semibold mb-2 h-full border-b-2 border-dashed border-b-sky-900 pb-4">About</h2>
+        <h2 className="text-2xl font-semibold mb-2 h-full border-b-2 border-dashed border-b-blue-900 pb-4">
+          About
+        </h2>
 
+        <p className="text-base text-gray-700 leading-relaxed pt-4">
+          Hi, I&apos;m Saif. I&apos;m passionate about all sorts of creativity.
+          I&apos;ve been designing and creating art since my early teens and
+          started programming to bring lively interactions and functionalities
+          to my designs. Now, I combine these passions and have my primary focus
+          on building Websites & Apps.
+        </p>
         <p className="text-base text-gray-700 leading-relaxed mb-6 pt-4">
-          Hey, I&apos;m Saif. I&apos;m a full-stack engineer with a primary
-          focus on building Websites & Apps. I have experience in working with
-          small to medium-sized businesses with consistent positive client
-          satisfaction. When I&apos;m not building, I&apos;m learning new stuff.
+          I have experience in working with small to medium-sized businesses
+          with consistent positive client satisfaction. When I&apos;m not
+          building, I&apos;m learning new stuff.
         </p>
 
         <div className="space-y-8">

@@ -44,40 +44,40 @@ export default function Hero() {
         EXPLORE <ArrowDown size={12} />
       </div>
       <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Apps
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Websites
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           User Interface
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           AI Integration
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Apps
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Websites
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           User Interface
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           AI Integration
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Apps
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Websites
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           User Interface
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           AI Integration
         </span>
       </div>
@@ -150,7 +150,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex w-full gap-6 max-sm:bg-sky-400/10 max-sm:backdrop-blur-md max-sm:hover:bg-sky-800/10 max-sm:border-[3px] border-sky-900/20 max-sm:p-4 max-sm:rounded-md transition-all">
+        <div className="flex sm:hidden w-full gap-6 transition-all">
           <TrustIndicators />
         </div>
       </div>

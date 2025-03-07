@@ -237,13 +237,13 @@ const CaseStudy = () => {
     purple: "border-violet-500/80",
     red: "border-red-500/80",
     amber: "border-amber-500/80",
-    cyan: "border-sky-500/80",
+    cyan: "border-blue-500/80",
   };
 
   return (
     <>
       <div
-        className={`min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:py-8 ${
+        className={`max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 pt-14 max-sm:py-8 ${
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >
@@ -267,7 +267,7 @@ const CaseStudy = () => {
           {...fadeIn}
           className="mb-8 grid grid-cols-2 gap-6 max-lg:grid-cols-1"
         >
-          <div className="bg-sky-950 text-background rounded-lg p-8 relative overflow-hidden">
+          <div className="bg-blue-950 text-background rounded-lg p-8 relative overflow-hidden">
             <div
               className={`h-60 aspect-square rounded-full border-[24px] ${
                 colorClasses[project.color]
@@ -281,7 +281,7 @@ const CaseStudy = () => {
                 ].map((tech, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 text-xs font-medium text-sky-200 bg-sky-900/50 rounded-full"
+                    className="px-3 py-1 text-xs font-medium text-blue-200 bg-blue-900/50 rounded-full"
                   >
                     {tech}
                   </span>
@@ -293,13 +293,13 @@ const CaseStudy = () => {
             </h1>
             <p className=" leading-relaxed">{project.description}</p>
             {/* Objectives */}
-            <motion.section {...fadeIn} className="mt-8 text-sky-50 ">
+            <motion.section {...fadeIn} className="mt-8 text-blue-50 ">
               <div>
                 <h2 className="text-lg font-semibold mt-2 mb-4">Objectives</h2>
                 <ul className="space-y-4">
                   {project.objectives?.map((objective, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="w-1.5 h-0.5 rounded-full bg-sky-50 mt-2.5 shrink-0" />
+                      <span className="w-1.5 h-[1px] rounded-full bg-blue-50 mt-2.5 shrink-0" />
                       <span>{objective}</span>
                     </li>
                   ))}
@@ -330,16 +330,14 @@ const CaseStudy = () => {
               <motion.section {...fadeIn} className="mb-12">
                 <div>
                   {/* <span className="text-main-900 font-mono">02</span> */}
-                  <h2 className="text-lg font-semibold mt-2 mb-4">
-                    Challenges
-                  </h2>
+                  <h2 className="text-lg font-semibold mb-4">Challenges</h2>
                   <ul className="space-y-4">
                     {project.challenges?.map((challenge, i) => (
                       <li
                         key={i}
                         className="flex items-start gap-3 text-neutral-800"
                       >
-                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span className="w-1.5 h-[1px] rounded-full bg-neutral-800 mt-2.5 shrink-0" />
                         <span>{challenge}</span>
                       </li>
                     ))}
@@ -357,7 +355,7 @@ const CaseStudy = () => {
                         key={i}
                         className="flex items-start gap-3 text-neutral-800"
                       >
-                        <span className="w-1.5 h-0.5 rounded-full bg-neutral-800 mt-2.5 shrink-0" />
+                        <span className="w-1.5 h-[1px] rounded-full bg-neutral-800 mt-2.5 shrink-0" />
                         <span>{solution}</span>
                       </li>
                     ))}
@@ -368,7 +366,7 @@ const CaseStudy = () => {
 
             {/* Project Gallery */}
             {project.projectImages?.length > 1 && (
-              <motion.section {...fadeIn} className="mb-20 ">
+              <motion.section {...fadeIn} className="mb-20">
                 <h2 className="text-lg font-semibold mb-6">Project Gallery</h2>
                 <ImageCarousel images={project.projectImages} />
               </motion.section>
@@ -383,7 +381,7 @@ const CaseStudy = () => {
                 {project.features.map((feature, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 p-3 px-4 bg-sky-600/20 rounded-sm border border-sky-600/20 text-sm"
+                    className="flex items-center gap-2 p-3 px-4 bg-blue-600/20 rounded-sm border border-blue-600/20 text-sm"
                   >
                     <Asterisk
                       strokeWidth={1.5}

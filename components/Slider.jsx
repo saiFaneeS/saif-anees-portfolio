@@ -2,6 +2,7 @@ import { ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { TrustIndicators } from "./TrustIndicators";
 
 const Slider = () => {
   const panel = [{ id: 1 }, { id: 2 }, { id: 3 }];
@@ -19,6 +20,7 @@ const Slider = () => {
             key={el.id}
             className="flex gap-20 sm:animate-scroll whitespace-nowrap group-hover:paused"
           >
+            <TrustIndicators />
             <div className="flex gap-2">
               <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-sky-800/20 overflow-hidden">
                 {images.map((el) => {

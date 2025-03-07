@@ -19,11 +19,11 @@ const Navbar = () => {
   return (
     <>
       <div
-        className={`absolute top-0 w-full flex gap-4 items-start justify-between px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-4 max-sm:pt-4 z-20 sm:h-32`}
+        className={`absolute top-0 w-full flex gap-4 items-start justify-between px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-4 max-sm:pt-4 z-20 sm:h-32 pointer-events-none`}
       >
         <Link
           href={"/"}
-          className="text-lg font-medium flex gap-3 items-center shrink-0 sm:sticky top-4"
+          className="text-lg font-medium flex gap-3 items-center shrink-0 sm:sticky top-4 pointer-events-auto"
         >
           {/* <Image
             src={"/pfp.jpg"}
@@ -34,21 +34,21 @@ const Navbar = () => {
           /> */}
           Saif Anees
         </Link>
-        <div className="text-lg font-semibold flex gap-4 items-center justify-center sm:sticky top-4">
+        <div className="text-lg font-semibold flex gap-4 items-center justify-center sm:sticky top-4 pointer-events-auto">
           <Link
             href={"mailto:saifanees11@gmail.com"}
-            className="text-sm font-medium flex gap-4 items-center justify-center bg-sky-950 text-sky-50 px-12 py-1 rounded-sm border border-sky-950 hover:bg-transparent hover:text-sky-950"
+            className="text-sm font-medium flex gap-4 items-center justify-center bg-blue-950 text-blue-50 px-12 py-1 rounded-sm border border-blue-950 hover:bg-transparent hover:text-blue-950"
           >
             LET&apos;S TALK <ArrowRight size={14} />
           </Link>
           {/* <Link
             href={"https://www.linkedin.com/in/saif-anees/"}
-            className="cursor-pointer leading-none gap-2 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/10 hover:border-sky-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
+            className="cursor-pointer leading-none gap-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
           >
             <Linkedin size={20} />
           </Link> */}
           {/* <div
-            className="cursor-pointer leading-none gap-2 bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/10 hover:border-sky-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
+            className="cursor-pointer leading-none gap-2 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/10 hover:border-blue-800/15 hover:bg-opacity-50 transition-all h-9 flex items-center justify-center p-2 rounded"
             onClick={() => setIsActive(!isActive)}
           >
             <Menu size={24} strokeWidth={2} />
@@ -70,7 +70,7 @@ const Navbar = () => {
                 router.push("/");
               }, 1000),
             ]}
-            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-sky-500`}
+            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-blue-500`}
           >
             {" "}
             <span className="text-base font-medium mr-2">01</span>HOME
@@ -83,7 +83,7 @@ const Navbar = () => {
                 router.push("/works");
               }, 1000),
             ]}
-            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-sky-500`}
+            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-blue-500`}
           >
             <span className="text-base font-medium mr-2">02</span>WORKS
           </li>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 router.push("/about");
               }, 1000),
             ]}
-            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-sky-500`}
+            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-blue-500`}
           >
             <span className="text-base font-medium mr-2">03</span>ABOUT
           </li>
@@ -107,7 +107,7 @@ const Navbar = () => {
                 router.push("/contact");
               }, 1000),
             ]}
-            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-sky-500`}
+            className={`hover:ml-12 transition-all delay-75 duration-500 w-fit cursor-pointer hover:text-blue-500`}
           >
             <span className="text-base font-medium mr-2">04</span>CONTACT
           </li>
