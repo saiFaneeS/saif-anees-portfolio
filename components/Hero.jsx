@@ -1,39 +1,45 @@
 "use client";
 
-import { useNavbar } from "@/context/Navbar";
-import React, { useEffect, useState } from "react";
-import Autoplay from "embla-carousel-autoplay";
+import React from "react";
 import { TrustIndicators } from "./TrustIndicators";
 import Slider from "./Slider";
-import Backdrop3d from "./Backdrop3d";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown, ArrowDownRight, ArrowRight } from "lucide-react";
+import { useRouter } from "next/router";
+import { Link as ScrollLink, scroller } from "react-scroll";
 
 export default function Hero() {
-  const { isActive, pageChanged, setPageChanged } = useNavbar();
-  const [loading, setLoading] = useState(true);
-
-  const panel = [{ id: 1 }, { id: 2 }, { id: 3 }];
   const images = [{ id: 1 }, { id: 2 }];
 
-  useEffect(() => {
-    setPageChanged(false);
-    // Simulate loading
-    setTimeout(() => setLoading(false), 1000);
-  }, [setPageChanged]);
+  const router = useRouter();
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 4000, stopOnInteraction: true })
-  );
+  const scrollToSection = (sectionId) => {
+    if (router.pathname !== "/") {
+      router.push(`/?scrollTo=${sectionId}`).then(() => {
+        scroller.scrollTo(sectionId, {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+          offset: -50,
+        });
+      });
+    } else {
+      scroller.scrollTo(sectionId, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }
+  };
 
   return (
     <div
       className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 max-sm:gap-12 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 max-sm:pt-12 w-full lg:overflow-hidden lg:h-screen`}
     >
-      <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
+      {/* <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
         EXPLORE <ArrowDown size={12} />
-      </div>
+      </div> */}
       <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
         <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
           Apps
@@ -132,12 +138,13 @@ export default function Hero() {
             <h4 className="text-base font-medium leading-none mb-4">
               My Works
             </h4>
-            <Link
-              href={"/works"}
+            <ScrollLink
+              to="works-section"
+              onClick={() => scrollToSection("works-section")}
               className="px-4 py-1 flex gap-2 items-center hover:underline text-sm text-nowrap"
             >
-              <ArrowRight size={16} strokeWidth={1.5} /> Learn More
-            </Link>
+              <ArrowDownRight size={16} strokeWidth={1.5} /> Learn More
+            </ScrollLink>
           </div>
         </div>
 

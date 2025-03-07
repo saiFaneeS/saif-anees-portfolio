@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
 
 const Navbar = () => {
@@ -49,7 +49,7 @@ const Navbar = () => {
           <ScrollLink
             to="contact-section"
             onClick={() => scrollToSection("contact-section")}
-            className="text-sm font-normal tracking-wide flex gap-4 items-center justify-center bg-foreground text-sky-50 px-12 py-1 rounded-sm border border-foreground hover:bg-transparent hover:text-foreground cursor-pointer"
+            className="text-sm font-normal tracking-wide flex gap-4 items-center justify-center leading-none bg-foreground text-sky-50 px-12 max-sm:px-8 py-2 rounded-[3px] border border-foreground hover:bg-transparent hover:text-foreground cursor-pointer"
           >
             LET&apos;S TALK <ArrowRight size={14} />
           </ScrollLink>

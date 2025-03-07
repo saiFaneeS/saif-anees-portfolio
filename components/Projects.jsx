@@ -111,7 +111,7 @@ const Projects = () => {
       >
         <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6 max-sm:gap-4">
           <div className="h-60 aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-10 works-section" />
             {projects[currentProjectIndex]?.image && (
               <Image
                 src={projects[currentProjectIndex]?.image}

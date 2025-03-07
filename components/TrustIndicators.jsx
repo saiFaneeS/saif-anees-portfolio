@@ -36,7 +36,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-full sm:w-96 max-sm:rounded-md bg-sky-600/10 max-sm:backdrop-blur-sm shadow-3xl max-sm:border-foreground/10 max-sm:border-2 p-3 px-4 rounded-md overflow-hidden">
+    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-full sm:w-96 rounded-full bg-sky-600/10 max-sm:backdrop-blur-sm shadow-3xl border-foreground/10 border-2 p-3 px-8 overflow-hidden">
       {/* <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
@@ -50,9 +50,9 @@ export const TrustIndicators = () => {
       /> */}
       <motion.div
         key={currentIndex}
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -20 }}
         className="text-sm font-medium flex gap-2 max-sm:items-start items-center max-sm:flex-col flex-wrap relative z-0"
       >
         <span className="text-wrap line-clamp-2">
@@ -67,7 +67,7 @@ export const TrustIndicators = () => {
                 height={100}
                 width={100}
                 alt=""
-                className="h-5 w-5 object-contain rounded-full "
+                className="h-5 w-5 object-contain rounded-ful grayscalel"
               />
             )}
             {testimonials[currentIndex]?.author === "Igal S." && (
@@ -76,11 +76,11 @@ export const TrustIndicators = () => {
                 height={100}
                 width={100}
                 alt=""
-                className="h-5 w-5 object-cover rounded-full"
+                className="h-5 w-5 object-cover rounded-full grayscale"
               />
             )}
             {testimonials[currentIndex]?.author === "Violet Clough" && (
-              <div className="bg-violet-600 p-[2px] rounded-full">
+              <div className="bg-violet-600 p-[2px] rounded-full grayscale">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="15"
@@ -104,7 +104,7 @@ export const TrustIndicators = () => {
             {testimonials[currentIndex]?.author}
           </span>
           <span>
-            <Quote className="size-4 text-sky-500" />
+            <Quote className="size-4 text-sky-800" />
           </span>
         </span>
       </motion.div>

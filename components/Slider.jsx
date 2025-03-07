@@ -1,12 +1,36 @@
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowDownRight, ArrowRight, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { TrustIndicators } from "./TrustIndicators";
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { useRouter } from "next/router";
 
 const Slider = () => {
   const panel = [{ id: 1 }, { id: 2 }, { id: 3 }];
   const images = [{ id: 1 }, { id: 2 }];
+
+  const router = useRouter();
+
+  const scrollToSection = (sectionId) => {
+    if (router.pathname !== "/") {
+      router.push(`/?scrollTo=${sectionId}`).then(() => {
+        scroller.scrollTo(sectionId, {
+          duration: 800,
+          delay: 0,
+          smooth: "easeInOutQuart",
+          offset: -50,
+        });
+      });
+    } else {
+      scroller.scrollTo(sectionId, {
+        duration: 800,
+        delay: 0,
+        smooth: "easeInOutQuart",
+        offset: -50,
+      });
+    }
+  };
 
   return (
     <div
@@ -61,12 +85,13 @@ const Slider = () => {
                 <h4 className="text-base font-medium leading-none mb-4">
                   My Works
                 </h4>
-                <Link
-                  href={"/works"}
-                  className="px-4 py-1 flex gap-2 items-center hover:underline text-sm text-nowrap"
+                <ScrollLink
+                  to="works-section"
+                  onClick={() => scrollToSection("works-section")}
+                  className="px-4 py-1 flex gap-2 items-center hover:underline text-sm text-nowrap cursor-pointer"
                 >
-                  <ArrowRight size={16} strokeWidth={1.5} /> Learn More
-                </Link>
+                  <ArrowDownRight size={16} strokeWidth={1.5} /> Learn More
+                </ScrollLink>
               </div>
             </div>
 
