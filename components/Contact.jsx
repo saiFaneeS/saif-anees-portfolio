@@ -71,7 +71,7 @@ const ContactPage = () => {
               Contact
             </span>
             <h1 className="text-2xl font-semibold animate-in fade-in slide-in-from-bottom-8 duration-700 text-white">
-              Let's Talk
+              Let&apos;s Talk
             </h1>
             <p className="text-sm text-sky-50/70 max-w-2xl animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
               Schedule a meeting or connect with me through any of the channels
