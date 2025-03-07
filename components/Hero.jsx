@@ -29,7 +29,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-hidden bg-sky-50/60 relative z-0 text-slate-950 flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 w-full lg:overflow-hidden lg:h-screen`}
+      className={`h-screen overflow-hidden bg-sky-50/60 relative z-0 text-sky-950 flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 w-full lg:overflow-hidden lg:h-screen`}
     >
       <div className="h-screen w-full absolute top-0 left-0 -z-10 bg-sky-100">
         {/* <Image
@@ -44,40 +44,40 @@ export default function Hero() {
         EXPLORE <ArrowDown size={12} />
       </div>
       <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           Apps
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           Websites
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           User Interface
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           AI Integration
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           Apps
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           Websites
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           User Interface
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           AI Integration
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           Apps
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           Websites
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           User Interface
         </span>
-        <span className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/5 rounded-full">
+        <span className="px-3 py-1 text-xs font-medium text-sky-700 bg-sky-900/5 rounded-full">
           AI Integration
         </span>
       </div>

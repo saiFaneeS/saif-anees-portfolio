@@ -205,7 +205,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="space-y-2 border-[3px] border-sky-900/20 backdrop-blur-xl bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
+          <div className="space-y-2 border-[3px] border-sky-900/20 backdrop-blur-md bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
             {projects.map((project, index) => (
               <button
                 key={index}

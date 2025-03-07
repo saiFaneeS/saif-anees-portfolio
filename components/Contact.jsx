@@ -36,12 +36,12 @@ const Contact = () => {
 
   return (
     <div
-      className={`min-h-screen flex items-center relative w-full px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:py-16 ${
+      className={`min-h-screen bg-sky-950 text-sky-50 flex items-center relative w-full px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:py-16 ${
         isActive ? "slide-out-top" : "slide-in-bottom"
       } ${pageChanged ? "hidden" : ""}`}
     >
       <div className="w-full">
-        <h2 className="text-2xl font-semibold mb-2 border-b-2 border-dashed border-b-sky-900 pb-4">Contact</h2>
+        <h2 className="text-2xl font-semibold mb-2 border-b-2 border-dashed border-b-sky-50 pb-4">Contact</h2>
 
         <div className="space-y-12">
           <div className="group">
@@ -50,7 +50,7 @@ const Contact = () => {
             </p>
             <Link
               href="mailto:saifanees11@gmail.com"
-              className="inline-flex items-center gap-3 text-base font-medium hover:text-gray-600 transition-colors"
+              className="inline-flex items-center gap-3 text-base font-medium hover:text-sky-100 transition-colors"
             >
               <Mail
                 size={24}
@@ -72,7 +72,7 @@ const Contact = () => {
                   href={link.url}
                   className="group flex items-center gap-3 p-4 rounded-sm border border-neutral-800/10 bg-sky-100/50 hover:bg-sky-800/80 hover:text-sky-50 transition-all"
                 >
-                  <span className="text-gray-900 group-hover:text-sky-100 transition-colors">
+                  <span className="group-hover:text-sky-100 transition-colors">
                     {link.icon}
                   </span>
                   <span className="font-medium group-hover:translate-x-1 transition-transform">
