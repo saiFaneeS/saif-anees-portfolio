@@ -7,7 +7,6 @@ export default function PixelGrid() {
   const totalPixels = cols * rows;
 
   const [pixels, setPixels] = useState([]);
-  const [showBlackScreen, setShowBlackScreen] = useState(true);
   const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
@@ -16,54 +15,44 @@ export default function PixelGrid() {
     // Shuffle pixels for a random effect
     tempPixels.sort(() => Math.random() - 0.4);
 
-    // Step 1: Black screen for 0.5s
-    setTimeout(() => {
-      setShowBlackScreen(false);
-    }, 500);
-
-    // Step 2: Start pixel animation after black screen disappears
+    // Delay before starting animation
     setTimeout(() => {
       setPixels(tempPixels);
       setStartAnimation(true);
-    }, 500);
+    }, 500); // 0.5s delay
   }, []);
 
   return (
-    <>
-      {/* Full-screen black overlay */}
-        <motion.div
-          className="fixed top-0 left-0 w-full h-screen bg-black z-[60]"
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 0 }}
-          transition={{ delay: 0.8 }}
-        />
+    <div className="fixed top-0 left-0 w-full h-screen grid grid-cols-20 grid-rows-10 overflow-hidden z-50 pointer-events-none">
+      <motion.div
+        className="fixed top-0 left-0 w-full h-screen bg-foreground z-[60]"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0 }}
+        transition={{ delay: 0.8 }}
+      />
+      {startAnimation &&
+        pixels.map((pixel, index) => {
+          const x = pixel % cols;
+          const y = Math.floor(pixel / cols);
 
-      {/* Pixel Grid Animation */}
-      <div className="fixed top-0 left-0 w-full h-screen grid grid-cols-20 grid-rows-10 overflow-hidden z-50 pointer-events-none">
-        {startAnimation &&
-          pixels.map((pixel, index) => {
-            const x = pixel % cols;
-            const y = Math.floor(pixel / cols);
-
-            return (
-              <motion.div
-                key={index}
-                className="bg-foreground w-[14%] h-[10%] rounded-sm scale-[103%]"
-                style={{
-                  position: "absolute",
-                  top: `${(y / rows) * 100}%`,
-                  left: `${(x / cols) * 100}%`,
-                }}
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 0 }}
-                transition={{
-                  delay: index * 0.004, // Start animation after 0.5s
-                  duration: 0.16,
-                }}
-              />
-            );
-          })}
-      </div>
-    </>
+          return (
+            <motion.div
+              key={index}
+              className="bg-foreground w-[14%] h-[10%] rounded-sm scale-[103%]"
+              style={{
+                position: "absolute",
+                top: `${(y / rows) * 100}%`,
+                left: `${(x / cols) * 100}%`,
+              }}
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{
+                delay: index * 0.004,
+                duration: 0.16,
+              }}
+            />
+          );
+        })}
+    </div>
   );
 }
