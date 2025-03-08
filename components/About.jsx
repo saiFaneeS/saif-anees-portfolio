@@ -15,6 +15,7 @@ const About = () => {
     { name: "Javascript", icon: "/icons/javascript-color.svg" },
     { name: "GSAP", icon: "/icons/gsap.svg" },
     { name: "TailwindCSS", icon: "/icons/tailwindcss-color.svg" },
+    { name: "Laravel", icon: "/icons/laravel-filled.svg" },
   ];
   const tech2 = [
     { name: "Figma", icon: "/icons/figma-color.svg" },
@@ -67,13 +68,13 @@ const About = () => {
 
           <p className="text-base font-medium text-sky-950/80 leading-relaxed pt-4 max-w-6xl">
             Hi, I&apos;m Saif<span className="text-sm pl-1">👋.</span> I love
-            all things creative. I&apos;ve been designing since my early teens
-            and picked up programming to add life to my work.
+            all things creative. I&apos;ve creating designs since I was 13, then
+            I picked up programming to add life to my work.
           </p>
           <p className="text-base font-medium text-sky-950/80 leading-relaxed mb-6 pt-4 max-w-6xl">
-            Now, My focus is on building Websites & Apps that solve the
-            problems, always ensuring client satisfaction. When I&apos;m not
-            building, I&apos;m learning some new stuff!
+            Currently, My focus is on building Websites & Apps that solve the
+            client's problems, and always ensuring their satisfaction. When
+            I&apos;m not building something, I&apos;m trying something new.
           </p>
         </div>
         <div>

@@ -71,11 +71,11 @@ const Projects = () => {
     <div id="slide-in-section" className="sm:sticky top-0">
       <Scroller scrollText={"WORKS"} />
       <div
-        className={`sm:min-h-[130vh] bg-sky-100/80 flex max-md:flex-col justify-center items-start max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 sm:py-32 py-16 relative w-full`}
+        className={`sm:min-h-[130vh] bg-foreground/95 text-sky-50 flex max-md:flex-col justify-center items-start max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 sm:py-32 py-16 relative w-full`}
       >
-        <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6 max-sm:gap-4">
+        <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6 max-sm:gap-4 animate-in slide-in-from-bottom-24 transition-all duration-150">
           <div className="w-full aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 z-10 works-section" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/0 z-10 works-section" />
             {projects[currentProjectIndex]?.image && (
               <Image
                 src={projects[currentProjectIndex]?.image}
@@ -90,14 +90,14 @@ const Projects = () => {
                 }`}
               />
             )}{" "}
-            <div className="absolute bottom-4 left-4 z-10 flex gap-2 items-center flex-wrap">
+            <div className="absolute bottom-2 left-2 z-10 flex gap-2 items-center flex-wrap">
               {projects[currentProjectIndex]?.url && (
                 <Link
                   href={projects[currentProjectIndex]?.url}
                   target="_blank"
                   className=""
                 >
-                  <button className="text-sm group flex items-center gap-2 bg-sky-50/80 hover:bg-sky-100/90 text-sky-900 hover:text-sky-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                  <button className="text-sm group flex items-center gap-2 bg-sky-100/90 hover:bg-sky-100/90 text-sky-900 hover:text-sky-900 px-5 py-1 rounded-[2px] font-medium transition-all">
                     Visit Site
                     <ExternalLink
                       size={16}
@@ -111,7 +111,7 @@ const Projects = () => {
                   href={`/case-study${projects[currentProjectIndex]?.slug}`}
                   className=""
                 >
-                  <button className="text-sm group flex items-center gap-2 bg-violet-50/80 hover:bg-violet-100/90 text-violet-900 px-4 py-1.5 rounded-sm font-medium transition-all">
+                  <button className="text-sm group flex items-center gap-2 bg-orange-100/90 hover:bg-orange-100/90 text-orange-900 px-5 py-1 rounded-[2px] font-medium transition-all">
                     Case Study
                     <ExternalLink
                       size={16}
@@ -126,14 +126,14 @@ const Projects = () => {
             <h3 className="text-base font-semibold mb-2 max-sm:hidden">
               {projects[currentProjectIndex]?.name}
             </h3>
-            <p className="text-neutral-800 text-sm line-clamp-1 mb-4">
+            <p className="text-sky-50/80 tracking-wide text-sm line-clamp-1 mb-4">
               {projects[currentProjectIndex]?.description}
             </p>
             <div className="flex flex-wrap gap-2">
               {projects[currentProjectIndex]?.tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-xs font-medium text-neutral-700 bg-neutral-900/10 rounded-full"
+                  className="px-3 py-1 text-xs font-medium text-sky-100 bg-sky-50/10 tracking-wide rounded-full"
                 >
                   {tag}
                 </span>
@@ -154,7 +154,7 @@ const Projects = () => {
                     (prev) => (prev - 1 + projects.length) % projects.length
                   )
                 }
-                className="p-2 border-2 border-sky-900/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
+                className="p-2 border-2 border-sky-100/10 bg-sky-200/5 hover:bg-sky-200/15 rounded-full transition-colors max-sm:p-1"
               >
                 <ArrowBigUp size={22} strokeWidth={1.2} />
               </button>
@@ -162,22 +162,22 @@ const Projects = () => {
                 onClick={() =>
                   setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
                 }
-                className="p-2 border-2 border-sky-900/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
+                className="p-2 border-2 border-sky-100/10 bg-sky-200/5 hover:bg-sky-200/15 rounded-full transition-colors max-sm:p-1"
               >
                 <ArrowBigDown size={22} strokeWidth={1.2} />
               </button>
             </div>
           </div>
 
-          <div className="space-y-2 border-[3px] border-sky-900/10 backdrop-blur-md bg-sky-800/[7%] p-2 rounded-md overflow-hidden">
+          <div className="space-y-2 border-[3px] border-sky-100/10 backdrop-blur-md bg-sky-200/[7%] p-2 rounded-md overflow-hidden">
             {projects.map((project, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentProjectIndex(index)}
                 className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                   index === currentProjectIndex
-                    ? "bg-sky-950 text-white"
-                    : "hover:bg-sky-900/10"
+                    ? "bg-sky-500 text-black/95"
+                    : "hover:bg-sky-600/10"
                 }`}
               >
                 <div className="text-sm flex items-center gap-4">

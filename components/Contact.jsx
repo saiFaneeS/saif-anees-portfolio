@@ -14,7 +14,7 @@ const SocialLink = ({ name, url, icon }) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex w-full items-center justify-between p-4 max-sm:p-2 bg-black/5 backdrop-blur-sm border border-white/10 hover:bg-black/10 transition-all duration-300 group"
+      className="flex w-full items-center justify-between p-4 max-sm:p-2 bg-foreground/15 backdrop-blur-sm border border-white/10 hover:bg-black/10 transition-all duration-300 group"
     >
       <div className="flex items-center gap-3">
         <div className="p-2 rounded-xl bg-white/10">{icon}</div>
@@ -63,8 +63,8 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen lg:h-screen bg-foreground text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
-      <div className="grid lg:grid-cols-5 gap-8 items-center w-full mb-8">
+    <div className="min-h-screen lg:h-screen bg-sky-700 text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
+      <div className="grid lg:grid-cols-4 gap-8 items-center w-full mb-8">
         <div className="lg:col-span-2">
           <div className="border-b border-dashed border-sky-50/30 pb-8 mb-8">
             <h1 className="text-2xl font-semibold text-white contact-section">
@@ -87,7 +87,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <div className="lg:col-span-3 rounded-lg relative overflow-hidden border border-white/10 shadow-xl h-[80vh]">
+        <div className="lg:col-span-2 rounded-lg relative overflow-hidden border border-white/10 shadow-xl h-[70vh]">
           <iframe
             src="https://calendly.com/saifanees11/saifanees"
             width="100%"
