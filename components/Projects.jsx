@@ -154,7 +154,7 @@ const Projects = () => {
                     (prev) => (prev - 1 + projects.length) % projects.length
                   )
                 }
-                className="p-2 border-2 border-foreground/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
+                className="p-2 border-2 border-sky-900/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
               >
                 <ArrowBigUp size={22} strokeWidth={1.2} />
               </button>
@@ -162,21 +162,21 @@ const Projects = () => {
                 onClick={() =>
                   setCurrentProjectIndex((prev) => (prev + 1) % projects.length)
                 }
-                className="p-2 border-2 border-foreground/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
+                className="p-2 border-2 border-sky-900/10 bg-sky-900/5 hover:bg-sky-900/15 rounded-full transition-colors max-sm:p-1"
               >
                 <ArrowBigDown size={22} strokeWidth={1.2} />
               </button>
             </div>
           </div>
 
-          <div className="space-y-2 border-[3px] border-foreground/10 backdrop-blur-md bg-sky-800/[7%] p-2 rounded-md overflow-hidden">
+          <div className="space-y-2 border-[3px] border-sky-900/10 backdrop-blur-md bg-sky-800/[7%] p-2 rounded-md overflow-hidden">
             {projects.map((project, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentProjectIndex(index)}
                 className={`group flex items-center justify-between w-full p-3 rounded transition-all ${
                   index === currentProjectIndex
-                    ? "bg-foreground text-white"
+                    ? "bg-sky-950 text-white"
                     : "hover:bg-sky-900/10"
                 }`}
               >

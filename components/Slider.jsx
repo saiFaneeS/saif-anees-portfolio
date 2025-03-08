@@ -142,7 +142,7 @@ const Slider = () => {
 
                 <Link
                   href="mailto:saifanees11@gmail.com"
-                  className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sky-400 hover:bg-amber-300 rounded-full p-4"
+                  className="absolute z-30 hover:opacity-80 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sky-400 hover:bg-orange-500 rounded-full p-4"
                 >
                   <Mail className="h-7 w-7" strokeWidth={1.2} />
                 </Link>

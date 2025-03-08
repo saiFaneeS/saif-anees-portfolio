@@ -1,0 +1,14 @@
+------------ C++ ------------
+
+void c_plus_plus_loop() {
+     while (true) {
+		printf("Hello World!");
+	 	sleep(1 second);
+	 }
+} 
+
+------------ React Native or Objective-C ------------
+
+1. Start a thread in Objective-C on the c_plus_plus_loop() function
+2. The thread connects to the React Native Expo code and give out the "Hello World!" output
+
