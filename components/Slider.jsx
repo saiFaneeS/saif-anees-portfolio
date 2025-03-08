@@ -35,7 +35,7 @@ const Slider = () => {
   return (
     <div className="flex flex-col gap-2">
       <div
-        className={`relative flex items-center max-sm:py-2 py-3 shadow-l gap-16 md:gap-28 border-y-[3px] border-sky-900/20 backdrop-blur-xl bg-sky-800/[7%] hover:bg-sky-800/[12%] overflow-clip max-sm:hidden transition-all group`}
+        className={`relative flex items-center max-sm:py-2 py-3 shadow-l gap-16 md:gap-28 border-y-[3px] border-foreground/5 backdrop-blur-xl bg-sky-800/[7%] hover:bg-sky-800/[12%] overflow-clip max-sm:hidden transition-all group`}
       >
         {" "}
         {/* Slider Wrapper */}

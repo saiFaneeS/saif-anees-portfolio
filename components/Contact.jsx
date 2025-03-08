@@ -6,22 +6,22 @@ import {
   MessageCircle,
   ArrowUpRight,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const SocialLink = ({ name, url, icon }) => {
   return (
-    <a
+    <Link
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex items-center justify-between p-4  bg-black/5 backdrop-blur-sm border border-white/10 hover:bg-black/10 transition-all duration-300 group"
+      className="flex w-full items-center justify-between p-4 max-sm:p-2 bg-black/5 backdrop-blur-sm border border-white/10 hover:bg-black/10 transition-all duration-300 group"
     >
       <div className="flex items-center gap-3">
-        <div className="p-2 rounded-full bg-white/10">{icon}</div>
+        <div className="p-2 rounded-xl bg-white/10">{icon}</div>
         <span className="font-medium">{name}</span>
       </div>
-      <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
-    </a>
+      <ArrowUpRight className="w-5 h-5 opacity-80 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+    </Link>
   );
 };
 
@@ -65,20 +65,17 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen lg:h-screen bg-foreground text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
       <div className="grid lg:grid-cols-5 gap-8 items-center w-full mb-8">
-        <div className="lg:col-span-2 mb-8">
+        <div className="lg:col-span-2">
           <div className="border-b border-dashed border-sky-50/30 pb-8 mb-8">
-            <span className="contact-section inline-block px-3 py-1 text-xs font-medium rounded-full bg-white/10 text-sky-50/80 mb-2">
-              Contact
-            </span>
             <h1 className="text-2xl font-semibold text-white">
               Let&apos;s Talk
             </h1>
-            <p className="text-sm text-sky-50/70 max-w-2xl tracking-wide">
+            <p className="text-sm text-sky-50/70 sm:max-w-2xl tracking-wide">
               Schedule a meeting or connect with me through any of the channels
               below.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="flex flex-col items-center justify-between gap-y-4 max-sm:gap-2">
             {socialLinks.map((link, index) => (
               <SocialLink
                 key={link.name}
@@ -100,7 +97,9 @@ const ContactPage = () => {
           />
         </div>
       </div>
-      <div className="w-full h-fit py-2 text-center absolute bottom-0 left-0 bg-black/70">Saif Anees</div>
+      <div className="w-full h-fit py-2 text-center absolute bottom-0 left-0 bg-black/70">
+        Saif Anees
+      </div>
     </div>
   );
 };

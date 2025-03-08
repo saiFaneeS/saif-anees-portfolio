@@ -36,7 +36,7 @@ export const TrustIndicators = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-full sm:w-96 sm:rounded-full bg-sky-600/10 max-sm:backdrop-blur-sm shadow-3xl border-foreground/10 border-y-2 sm:border-2 px-16 max-lg:px-14 max-md:px-12 max-sm:px-5 py-4 sm:p-3 sm:px-8 overflow-hidden">
+    <div className="relative flex items-center max-sm:items-start justify-center gap-2 w-full sm:w-96 sm:rounded-full bg-sky-600/5 max-sm:bg-sky-600/20 shadow-3xl border-foreground/5 border-y-2 sm:border-2 px-16 max-lg:px-14 max-md:px-12 max-sm:px-5 py-4 sm:p-3 sm:px-8 overflow-hidden">
       {/* <div className="flex items-center gap-1">
         {[...Array(5)].map((_, i) => (
           <Star key={i} size={14} className="fill-yellow-500 text-yellow-500" />
@@ -104,7 +104,7 @@ export const TrustIndicators = () => {
             {testimonials[currentIndex]?.author}
           </span>
           <span>
-            <Quote className="size-4 text-sky-800" />
+            <Quote className="size-5 text-sky-600" />
           </span>
         </span>
       </motion.div>

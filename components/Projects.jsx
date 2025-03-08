@@ -3,14 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useNavbar } from "@/context/Navbar";
 import {
   ArrowBigDown,
   ArrowBigUp,
   ExternalLink,
   ChevronRight,
 } from "lucide-react";
-import { motion } from "framer-motion";
 import Scroller from "./Scroller";
 
 const Projects = () => {
@@ -68,48 +66,12 @@ const Projects = () => {
 
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const [initialY, setInitialY] = useState(400);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setInitialY(window.innerWidth < 768 ? 50 : 400);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const section = document.getElementById("slide-in-section");
-      if (section) {
-        const rect = section.getBoundingClientRect();
-        if (rect.bottom * 0.6 <= window.innerHeight) {
-          setIsVisible(true);
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div id="slide-in-section" className="sm:sticky top-0">
-      <Scroller scrollText={"WORKS"}/>
-      <motion.div
-        initial={{ y: initialY }}
-        animate={isVisible ? { y: 0 } : {}}
-        transition={{
-          duration: 0.6,
-          ease: "easeOut",
-          damping: 10,
-          stiffness: 100,
-        }}
-        className={`min-h-screen bg-sky-100/80 flex max-md:flex-col justify-center items-center max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-16 relative w-full`}
+      <Scroller scrollText={"WORKS"} />
+      <div
+        className={`sm:min-h-[130vh] bg-sky-100/80 flex max-md:flex-col justify-center items-start max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 sm:py-32 py-16 relative w-full`}
       >
         <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6 max-sm:gap-4">
           <div className="w-full aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">
@@ -207,7 +169,7 @@ const Projects = () => {
             </div>
           </div>
 
-          <div className="space-y-2 border-[3px] border-sky-900/20 bg-sky-800/[5%] p-2 rounded-md overflow-hidden">
+          <div className="space-y-2 border-[3px] border-foreground/10 backdrop-blur-md bg-sky-800/[7%] p-2 rounded-md overflow-hidden">
             {projects.map((project, index) => (
               <button
                 key={index}
@@ -239,7 +201,7 @@ const Projects = () => {
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
