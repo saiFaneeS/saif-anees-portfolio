@@ -67,7 +67,7 @@ const ContactPage = () => {
       <div className="grid lg:grid-cols-5 gap-8 items-center w-full mb-8">
         <div className="lg:col-span-2">
           <div className="border-b border-dashed border-sky-50/30 pb-8 mb-8">
-            <h1 className="text-2xl font-semibold text-white">
+            <h1 className="text-2xl font-semibold text-white contact-section">
               Let&apos;s Talk
             </h1>
             <p className="text-sm text-sky-50/70 sm:max-w-2xl tracking-wide">
