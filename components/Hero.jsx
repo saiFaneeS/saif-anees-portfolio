@@ -4,7 +4,12 @@ import React from "react";
 import { TrustIndicators } from "./TrustIndicators";
 import Slider from "./Slider";
 import Image from "next/image";
-import { ArrowDown, ArrowDownRight, ArrowRight } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowDownRight,
+  ArrowRight,
+  ChevronDown,
+} from "lucide-react";
 import { useRouter } from "next/router";
 import { Link as ScrollLink, scroller } from "react-scroll";
 
@@ -35,7 +40,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 max-sm:gap-12 pt-24 max-sm:pt-12 w-full lg:overflow-hidden lg:h-screen`}
+      className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 max-sm:gap-12 pt-24 max-sm:pt-16 w-full lg:overflow-hidden lg:h-screen`}
     >
       {/* <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
         EXPLORE <ArrowDown size={12} />
@@ -98,7 +103,7 @@ export default function Hero() {
       </div>
       <div>
         {/* works panel */}
-        <div className="flex gap-0 sm:hidden mb-4 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
+        <div className="flex gap-0 sm:hidden px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-4 bg-sky-600/10 max-sm:backdrop-blur-sm border-foreground/10 border-t-2">
           <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-sky-600/10 overflow-hidden">
             {images.map((el) => {
               return (

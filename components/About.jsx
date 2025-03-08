@@ -37,7 +37,7 @@ const About = () => {
 
   return (
     <div
-      className={`overflow-x-hidden overflow-y-auto relative sm:sticky top-0 flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 max-sm:pt-20 max-sm:py-16`}
+      className={`overflow-x-hidden overflow-y-auto relative sm:sticky top-0 flex flex-col justify-center gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-20 max-sm:py-16`}
     >
       <div className="bg-sky-200 h-full w-full absolute top-0 left-0 z-0"></div>
       <div className="w-full flex flex-col justify-center relative z-10">
@@ -45,10 +45,10 @@ const About = () => {
           About
         </h2>
 
-        <p className="text-base text-gray-700 leading-relaxed pt-4 max-w-6xl">
+        <p className="text-base text-gray-700 leading-relaxed pt-4 max-w-5xl">
           Hi, I&apos;m Saif! I love all things creative. I&apos;ve been
           designing since my early teens and picked up programming to add life
-          to my work. Now, I focus on building Websites & Apps.
+          to my work. Now, My focus is on building Websites & Apps that solve real problems.
         </p>
         <p className="text-base text-gray-700 leading-relaxed mb-6 pt-4 max-w-6xl">
           I&apos;ve worked with small to medium businesses, always ensuring
@@ -66,7 +66,7 @@ const About = () => {
                 {section.items.map((tool, toolIndex) => (
                   <div
                     key={toolIndex}
-                    className="flex items-center gap-3 transition-all duration-300 group bg-sky-950 p-1.5 px-2 rounded-sm"
+                    className="flex items-center gap-3 transition-all duration-300 group bg-foreground p-1.5 px-2 rounded-sm"
                   >
                     <div
                       className={`relative w-6 h-6 flex-shrink-0 ${
