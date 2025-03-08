@@ -35,7 +35,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 max-sm:gap-12 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 pt-24 max-sm:pt-12 w-full lg:overflow-hidden lg:h-screen`}
+      className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 max-sm:gap-12 pt-24 max-sm:pt-12 w-full lg:overflow-hidden lg:h-screen`}
     >
       {/* <div className="absolute bottom-3 text-xs leading-none right-0 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 flex gap-6 items-center">
         EXPLORE <ArrowDown size={12} />
@@ -78,7 +78,7 @@ export default function Hero() {
           AI Integration
         </span>
       </div>
-      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500">
+      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
         <div>
           <h1
             className={`leading-none font-semibold flex break-words justify-start items-center text-left`}
@@ -98,7 +98,7 @@ export default function Hero() {
       </div>
       <div>
         {/* works panel */}
-        <div className="flex gap-0 sm:hidden mb-4">
+        <div className="flex gap-0 sm:hidden mb-4 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
           <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-sky-600/10 overflow-hidden">
             {images.map((el) => {
               return (

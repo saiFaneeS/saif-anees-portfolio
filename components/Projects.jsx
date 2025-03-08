@@ -11,6 +11,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Scroller from "./Scroller";
 
 const Projects = () => {
   const projects = [
@@ -98,6 +99,7 @@ const Projects = () => {
 
   return (
     <div id="slide-in-section" className="sm:sticky top-0">
+      <Scroller scrollText={"WORKS"}/>
       <motion.div
         initial={{ y: initialY }}
         animate={isVisible ? { y: 0 } : {}}
