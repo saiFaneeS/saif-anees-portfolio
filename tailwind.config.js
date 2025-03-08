@@ -99,6 +99,7 @@ module.exports = {
       },
       animation: {
         scroll: "scroll 25s linear infinite",
+        "scroll-slow": "scroll 1s linear infinite",
         "scroll-faster": "scroll 20s linear infinite",
         "snap-loop": "snap-loop 6s ease-in-out infinite", // Adjust duration
         rotate: "spin 10s linear infinite",

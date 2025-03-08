@@ -60,48 +60,11 @@ export default function Hero() {
           </h1>
         </div>
       </div>
-      <div className="flex flex-nowrap items-center justify-center gap-2 text-sm sm:hidden animate-scroll whitespace-nowrap">
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          Apps
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          Websites
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          User Interface
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          AI Integration
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          Apps
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          Websites
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          User Interface
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          AI Integration
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          Apps
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          Websites
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          User Interface
-        </span>
-        <span className="px-3 py-1 text-xs font-medium text-sky-900 bg-sky-900/5 rounded-full">
-          AI Integration
-        </span>
-      </div>
+
       <div className="pointer-events-auto">
         {/* works panel */}
-        <div className="flex gap-0 sm:hidden px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-4 bg-sky-600/5 border-foreground/5 border-t-2">
-          <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-sky-600/10 overflow-hidden">
+        <div className="flex gap-0 sm:hidden px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-4">
+          <div className="h-24 max-sm:h-20 aspect-[2.8] max-sm:w-40 rounded-md flex items-center justify-center gap-4 bg-sky-600/20 overflow-hidden">
             {images.map((el) => {
               return (
                 <>

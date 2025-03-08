@@ -64,9 +64,9 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen lg:h-screen bg-sky-700 text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
-      <div className="grid lg:grid-cols-4 gap-8 items-center w-full mb-8">
+      <div className="grid lg:grid-cols-4 gap-8 items-center w-full mb-8 max-sm:mb-4">
         <div className="lg:col-span-2">
-          <div className="border-b border-dashed border-sky-50/30 pb-8 mb-8">
+          <div className="border-b border-dashed border-sky-50/30 pb-8 max-sm:pb-4 mb-8 max-sm:mb-4">
             <h1 className="text-2xl font-semibold text-white contact-section">
               Let&apos;s Talk
             </h1>

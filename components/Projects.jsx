@@ -68,10 +68,26 @@ const Projects = () => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   return (
-    <div id="slide-in-section" className="sm:sticky top-0">
+    <div id="slide-in-section" className="relative sm:sticky top-0">
+      <div className="bg-foreground text-sky-50 py-1 max-sm:absolute w-full left-0 z-10 overflow-x-hidden -top-[67px] h-fit">
+        <div className="font-semibold text-3xl text-nowrap whitespace-nowrap animate-scroll">
+          <div className="flex items-center gap-12 max-sm:gap-6 tracking-wide whitespace-nowrap transition-all ease-in-out duration-100">
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+            <span>・</span> <span>WELCOME!</span>
+          </div>
+        </div>
+      </div>
+
       <Scroller scrollText={"WORKS"} />
       <div
-        className={`sm:min-h-[130vh] bg-foreground/95 text-sky-50 flex max-md:flex-col justify-center items-start max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 sm:py-32 py-16 relative w-full`}
+        className={`sm:min-h-[130vh] bg-foreground/95 text-sky-50 flex max-md:flex-col justify-center items-start max-md:items-start gap-12 max-md:gap-8 max-sm:gap-6 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 sm:py-20 py-16 relative w-full`}
       >
         <div className="w-1/3 max-md:w-full shrink-0 flex flex-col gap-6 max-sm:gap-4 animate-in slide-in-from-bottom-24 transition-all duration-150">
           <div className="w-full aspect-video overflow-hidden relative rounded-md bg-neutral-200/80">

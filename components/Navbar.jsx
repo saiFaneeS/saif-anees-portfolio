@@ -72,13 +72,13 @@ const Navbar = () => {
             <ScrollLink
               to="contact-section"
               onClick={() => scrollToSection("contact-section")}
-              className="text-sm font-normal tracking-wide flex gap-4 items-center justify-center leading-none bg-sky-50 sm:bg-foreground sm:text-sky-50 px-12 max-sm:px-4 py-2 rounded-[3px] border sm:border-foreground hover:bg-transparent hover:text-background sm:hover:text-foreground cursor-pointer"
+              className="text-sm font-normal tracking-wide flex gap-4 items-center justify-center leading-none bg-sky-50 sm:bg-foreground sm:text-sky-50 px-12 max-sm:px-5 py-2 rounded-[3px] border sm:border-foreground hover:bg-transparent hover:text-background sm:hover:text-foreground cursor-pointer"
             >
               LET&apos;S TALK <ArrowRight size={14} />
             </ScrollLink>
           </div>
         </div>
-        <p className="flex items-center gap-2 text-sm sm:hidden mt-2 text-foreground">
+        <p className="flex items-center gap-2 text-base sm:hidden mt-2 text-foreground">
           Designer
           <span className="flex items-center">
             <svg
