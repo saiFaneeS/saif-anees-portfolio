@@ -73,7 +73,7 @@ const About = () => {
           </p>
           <p className="text-base font-medium text-sky-950/80 leading-relaxed mb-6 pt-4 max-w-6xl">
             Currently, My focus is on building Websites & Apps that solve the
-            client's problems, and always ensuring their satisfaction. When
+            client&apos;s problems, and always ensuring their satisfaction. When
             I&apos;m not building something, I&apos;m trying something new.
           </p>
         </div>
