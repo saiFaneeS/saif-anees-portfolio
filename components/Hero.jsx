@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <div
-      className={`h-screen overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 pt-24 max-sm:pt-20 w-full lg:overflow-hidden lg:h-screen`}
+      className={`h-[95vh] overflow-hidden relative z-0 text-foreground flex flex-col justify-center gap-8 pt-24 max-sm:pt-20 w-full lg:overflow-hidden sm:h-screen`}
     >
       <div className="relative text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
         <div>

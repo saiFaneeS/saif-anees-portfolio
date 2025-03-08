@@ -8,19 +8,19 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const SocialLink = ({ name, url, icon }) => {
+const SocialLink = ({ name, url, icon, style }) => {
   return (
     <Link
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex w-full items-center justify-between p-4 max-sm:p-2 bg-foreground/15 backdrop-blur-sm border border-white/10 hover:bg-black/10 transition-all duration-300 group"
+      className={`flex w-full items-center justify-between p-3 max-sm:p-2 bg-foreground/15 text-white backdrop-blur-sm border border-white/10 transition-all duration-300 group ${style}`}
     >
       <div className="flex items-center gap-3">
         <div className="p-2 rounded-xl bg-white/10">{icon}</div>
-        <span className="font-medium">{name}</span>
+        <span className="font-medium sm:text-base">{name}</span>
       </div>
-      <ArrowUpRight className="w-5 h-5 opacity-80 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+      <ArrowUpRight className="size-5 opacity-80 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
     </Link>
   );
 };
@@ -28,14 +28,16 @@ const SocialLink = ({ name, url, icon }) => {
 const ContactPage = () => {
   const socialLinks = [
     {
-      name: "Email",
+      name: "saifanees11@gmail.com",
       url: "mailto:saifanees11@gmail.com",
       icon: <Mail className="w-5 h-5" />,
+      style: "bg-red-600/50 hover:bg-red-600/30",
     },
     {
       name: "WhatsApp",
-      url: "https://wa.me/+9203283490764",
+      url: "https://wa.me/923283490764",
       icon: <MessageCircle className="w-5 h-5" />,
+      style: "bg-green-600/50 hover:bg-green-600/30",
     },
     // {
     //   name: "Instagram",
@@ -46,6 +48,7 @@ const ContactPage = () => {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/saif-anees",
       icon: <Linkedin className="w-5 h-5" />,
+      style: "bg-blue-600/50 hover:bg-blue-600/30",
     },
   ];
 
@@ -66,7 +69,7 @@ const ContactPage = () => {
     <div className="min-h-screen lg:h-screen bg-sky-700 text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
       <div className="grid lg:grid-cols-4 gap-8 items-center w-full mb-8 max-sm:mb-4">
         <div className="lg:col-span-2">
-          <div className="border-b border-dashed border-sky-50/30 pb-8 max-sm:pb-4 mb-8 max-sm:mb-4">
+          <div className="border-b border-dashed border-sky-50/30 pb-8 max-sm:pb-4 mb-8 max-sm:mb-0">
             <h1 className="text-2xl font-semibold text-white contact-section">
               Let&apos;s Talk
             </h1>
@@ -75,13 +78,14 @@ const ContactPage = () => {
               below.
             </p>
           </div>
-          <div className="flex flex-col items-center justify-between gap-y-4 max-sm:gap-2">
+          <div className="flex flex-col items-center justify-between gap-y-4 max-sm:gap-2 max-sm:hidden">
             {socialLinks.map((link, index) => (
               <SocialLink
                 key={link.name}
                 name={link.name}
                 url={link.url}
                 icon={link.icon}
+                style={link.style}
               />
             ))}
           </div>
@@ -96,8 +100,20 @@ const ContactPage = () => {
             title="Select a Date & Time - Calendly"
           />
         </div>
+        <div className="flex flex-col items-center justify-between gap-y-4 max-sm:gap-2 sm:hidden">
+          {socialLinks.map((link, index) => (
+            <SocialLink
+              key={link.name}
+              name={link.name}
+              url={link.url}
+              icon={link.icon}
+              style={link.style}
+            />
+          ))}
+        </div>
       </div>
-      <div className="w-full h-fit py-2 text-center absolute bottom-0 left-0 bg-black/70">
+
+      <div className="w-full h-fit py-2 text-center absolute bottom-0 left-0 bg-foreground">
         Saif Anees
       </div>
     </div>
