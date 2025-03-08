@@ -71,9 +71,9 @@ const About = () => {
             and picked up programming to add life to my work.
           </p>
           <p className="text-base font-medium text-sky-950/80 leading-relaxed mb-6 pt-4 max-w-6xl">
-            Now, My focus is on building Websites & Apps that solve the problems,
-            always ensuring client satisfaction. When I&apos;m not building,
-            I&apos;m learning some new stuff!
+            Now, My focus is on building Websites & Apps that solve the
+            problems, always ensuring client satisfaction. When I&apos;m not
+            building, I&apos;m learning some new stuff!
           </p>
         </div>
         <div>
@@ -115,8 +115,8 @@ const About = () => {
               className="flex items-center justify-center gap-28 max-sm:gap-10 pl-20 tracking-wide transition-all ease-in-out duration-100"
               style={{ transform: `translateX(-${scrollLength}px)` }}
             >
-              {tech?.map((tool, toolIndex) => (
-                <div className="flex items-center gap-2">
+              {tech?.map((tool, index) => (
+                <div className="flex items-center gap-2" key={index}>
                   <img src={tool?.icon} className="h-5 shrink-0" />
                   <span>{tool?.name}</span>
                 </div>
@@ -128,8 +128,8 @@ const About = () => {
               className="flex items-center justify-center gap-28 max-sm:gap-10 pl-36 tracking-wide transition-all ease-in-out duration-100"
               style={{ transform: `translateX(-${scrollLength}px)` }}
             >
-              {tech2?.map((tool, toolIndex) => (
-                <div className="flex items-center gap-2">
+              {tech2?.map((tool, index) => (
+                <div className="flex items-center gap-2" key={index}>
                   <img src={tool?.icon} className="h-5 shrink-0" />
                   <span>{tool?.name}</span>
                 </div>
@@ -141,8 +141,8 @@ const About = () => {
               className="flex items-center justify-end gap-24 max-sm:gap-6 pr-20 tracking-wide transition-all ease-in-out duration-100"
               style={{ transform: `translateX(${scrollLength}px)` }}
             >
-              {skills?.map((tool, toolIndex) => (
-                <div className="flex items-center gap-2">
+              {skills?.map((tool, index) => (
+                <div className="flex items-center gap-2" key={index}>
                   <img src={tool?.icon} className="h-6 flex-shrink-0" />
                   <span>{tool?.name}</span>
                 </div>
