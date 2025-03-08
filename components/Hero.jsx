@@ -78,7 +78,7 @@ export default function Hero() {
           AI Integration
         </span>
       </div>
-      <div className="text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
+      <div className="relative text-6xl w-full max-sm:text-4xl pr-4 font-semibold leading-none text-sky-500 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4">
         <div>
           <h1
             className={`leading-none font-semibold flex break-words justify-start items-center text-left`}

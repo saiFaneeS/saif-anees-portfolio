@@ -66,7 +66,7 @@ const About = () => {
                 {section.items.map((tool, toolIndex) => (
                   <div
                     key={toolIndex}
-                    className="flex items-center gap-3  transition-all duration-300 group"
+                    className="flex items-center gap-3 transition-all duration-300 group bg-sky-950 p-1.5 px-2 rounded-sm"
                   >
                     <div
                       className={`relative w-6 h-6 flex-shrink-0 ${
@@ -77,10 +77,10 @@ const About = () => {
                         src={tool.icon}
                         alt={tool.name}
                         fill
-                        className="object-contain group-hover:scale-105 transition-transform"
+                        className="object-contain transition-transform"
                       />
                     </div>
-                    <span className="font-medium text-gray-800">
+                    <span className="font-medium tracking-wide text-sky-50">
                       {tool.name}
                     </span>
                   </div>
