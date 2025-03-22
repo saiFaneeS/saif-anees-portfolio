@@ -14,16 +14,6 @@ import Scroller from "./Scroller";
 const Projects = () => {
   const projects = [
     {
-      name: "Noblesoft Agency",
-      description: "Digital agency website with modern design and animations.",
-      image: "/new/noblesoft.jpg",
-      url: "https://noblesoft.vercel.app",
-      // slug: "/",
-      icons: "nextdotjs-color.svg",
-      year: "2023",
-      tags: ["Next.js", "Tailwind", "Framer Motion"],
-    },
-    {
       name: "MS Real Estate LLC",
       description: "Luxury real estate platform for property listings.",
       image: "/new/ms_re.jpg",
@@ -52,6 +42,16 @@ const Projects = () => {
       icons: "nextdotjs-color.svg",
       year: "2023",
       tags: ["Next.js", "Node.js", "CMS", "Tailwind"],
+    },
+    {
+      name: "Noblesoft Agency",
+      description: "Digital agency website with modern design and animations.",
+      image: "/new/noblesoft.jpg",
+      url: "https://noblesoft.vercel.app",
+      // slug: "/",
+      icons: "nextdotjs-color.svg",
+      year: "2023",
+      tags: ["Next.js", "Tailwind", "Framer Motion"],
     },
     {
       name: "Advance Lead Manager System",
