@@ -26,6 +26,69 @@ const CaseStudy = () => {
   const { isActive, pageChanged, setPageChanged } = useNavbar();
 
   const projects = [
+    {
+      color: "blue",
+      projectName: "The Silver Skin - Dermatology Clinic Website",
+      projectCover: "/new/silverskin.jpg",
+      client: {
+        name: "The Silver Skin",
+        location: "Manchester, UK",
+      },
+      businessType: "Healthcare / Dermatology Clinic",
+      platform: {
+        frontend: ["HTML", "CSS", "JavaScript"],
+        backend: ["PHP", "MySQL"],
+        CMS: ["WordPress"],
+      },
+      year: 2025,
+      description:
+        "Developed an intuitive and informative website for The Silver Skin, a dermatology clinic in Manchester, UK. The platform showcases treatments, enables online bookings, and enhances patient engagement.",
+      features: [
+        "Service pages with detailed treatment descriptions",
+        "Online booking system for patient consultations",
+        "Responsive and mobile-friendly design",
+        "Testimonials section for patient feedback",
+        "Contact form for inquiries",
+      ],
+      technologies: {
+        frontend: [
+          "HTML5",
+          "JavaScript",
+          "React.js",
+          "Framer Motion",
+          "Formspree",
+        ],
+        backend: ["PHP", "MySQL"],
+        CMS: ["WordPress"],
+      },
+      nextSteps: [
+        "Add a blog for skincare tips and clinic updates",
+        "Integrate an online store for recommended skincare products",
+        "Optimize SEO for better visibility in search engines",
+      ],
+      slug: "the-silver-skin",
+      objectives: [
+        "Improve online presence and accessibility for patients",
+        "Streamline appointment scheduling with an easy-to-use booking system",
+        "Ensure a modern and user-friendly design for all demographics",
+      ],
+      challenges: [
+        "Designing an interface that appeals to a diverse patient base",
+        "Seamlessly integrating a booking system within the website",
+        "Ensuring compliance with healthcare industry standards",
+      ],
+      solutions: [
+        "Developed a clean, modern website layout highlighting key treatments",
+        "Implemented a user-friendly online booking system",
+        "Optimized the site for mobile responsiveness and accessibility",
+      ],
+      // projectImages: [
+      //   "/silverskin/homepage.jpg",
+      //   "/silverskin/service-page.jpg",
+      //   "/silverskin/booking-system.jpg",
+      // ],
+      projectTitle: "The Silver Skin Dermatology Clinic",
+    },
     // Ohghad
     {
       color: "green",
