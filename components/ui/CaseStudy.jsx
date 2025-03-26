@@ -27,7 +27,7 @@ const CaseStudy = () => {
 
   const projects = [
     {
-      color: "pink",
+      color: "rose",
       projectName: "The Silver Skin - Dermatology Clinic Website",
       projectCover: "/new/tss.jpg",
       client: {
@@ -36,9 +36,8 @@ const CaseStudy = () => {
       },
       businessType: "Healthcare / Dermatology Clinic",
       platform: {
-        frontend: ["HTML", "CSS", "JavaScript"],
-        backend: ["PHP", "MySQL"],
-        CMS: ["WordPress"],
+        frontend: ["HTML5/CSS", "JavaScript", "React.js"],
+        backend: ["Formspree"],
       },
       year: 2025,
       description:
@@ -289,6 +288,7 @@ const CaseStudy = () => {
   if (!project) return null;
 
   const colorClasses = {
+    rose: "border-rose-500/80",
     blue: "border-sky-500/80",
     green: "border-green-500/80",
     purple: "border-violet-500/80",
@@ -300,7 +300,7 @@ const CaseStudy = () => {
   return (
     <>
       <div
-        className={`max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 pt-14 max-sm:py-8 ${
+        className={`max-md:gap-8 px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-24 pt-14 max-sm:pt-16 max-sm:pb-8 ${
           isActive ? "slide-out-top" : "slide-in-bottom"
         } ${pageChanged ? "hidden" : ""}`}
       >
@@ -348,9 +348,12 @@ const CaseStudy = () => {
             <h1 className="text-xl font-semibold mb-4">
               {project.projectTitle}
             </h1>
-            <p className=" leading-relaxed">{project.description}</p>
+            <p className="leading-relaxed">{project.description}</p>
             {/* Objectives */}
-            <motion.section {...fadeIn} className="mt-8 text-sky-50 ">
+            <motion.section
+              {...fadeIn}
+              className="mt-8 text-sky-50 relative z-10"
+            >
               <div>
                 <h2 className="text-lg font-semibold mt-2 mb-4">Objectives</h2>
                 <ul className="space-y-4">
