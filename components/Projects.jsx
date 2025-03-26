@@ -27,7 +27,7 @@ const Projects = () => {
       name: "The Silver Skin",
       description:
         "Aesthetic clinic website with treatment booking and pricing guide.",
-      image: "/new/tss.jpg",
+      image: "/new/tss1.jpg",
       url: "https://thesilverskin.com",
       slug: "/the-silver-skin",
       icons: "nextdotjs-color.svg",

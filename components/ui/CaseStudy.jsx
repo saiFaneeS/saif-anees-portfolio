@@ -29,7 +29,7 @@ const CaseStudy = () => {
     {
       color: "rose",
       projectName: "The Silver Skin - Dermatology Clinic Website",
-      projectCover: "/new/tss.jpg",
+      projectCover: "/new/tss1.jpg",
       client: {
         name: "The Silver Skin",
         location: "Manchester, UK",
