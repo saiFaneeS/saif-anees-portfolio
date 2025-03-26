@@ -27,9 +27,9 @@ const CaseStudy = () => {
 
   const projects = [
     {
-      color: "blue",
+      color: "pink",
       projectName: "The Silver Skin - Dermatology Clinic Website",
-      projectCover: "/new/silverskin.jpg",
+      projectCover: "/new/tss.jpg",
       client: {
         name: "The Silver Skin",
         location: "Manchester, UK",
@@ -51,15 +51,9 @@ const CaseStudy = () => {
         "Contact form for inquiries",
       ],
       technologies: {
-        frontend: [
-          "HTML5",
-          "JavaScript",
-          "React.js",
-          "Framer Motion",
-          "Formspree",
-        ],
-        backend: ["PHP", "MySQL"],
-        CMS: ["WordPress"],
+        frontend: ["HTML5", "JavaScript", "React.js", "Framer Motion"],
+        backend: ["Formspree"],
+        // CMS: ["WordPress"],
       },
       nextSteps: [
         "Add a blog for skincare tips and clinic updates",
