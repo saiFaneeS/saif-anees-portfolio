@@ -31,13 +31,13 @@ const ContactPage = () => {
       name: "saifanees11@gmail.com",
       url: "mailto:saifanees11@gmail.com",
       icon: <Mail className="w-5 h-5" />,
-      style: "bg-red-600/50 hover:bg-red-600/30",
+      style: "bg-red-800/70 hover:bg-red-600/30",
     },
     {
       name: "WhatsApp",
       url: "https://wa.me/923283490764",
       icon: <MessageCircle className="w-5 h-5" />,
-      style: "bg-green-600/50 hover:bg-green-600/30",
+      style: "bg-green-800/70 hover:bg-green-600/30",
     },
     // {
     //   name: "Instagram",
@@ -48,7 +48,7 @@ const ContactPage = () => {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/saif-anees",
       icon: <Linkedin className="w-5 h-5" />,
-      style: "bg-blue-600/50 hover:bg-blue-600/30",
+      style: "bg-blue-800/70 hover:bg-blue-600/30",
     },
   ];
 
@@ -66,7 +66,7 @@ const ContactPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen lg:h-screen bg-sky-700 text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
+    <div className="min-h-screen lg:h-screen bg-black text-sky-50 overflow-hidden relative z-50 flex justify-center items-center px-12 max-lg:px-10 max-md:px-8 max-sm:px-4 py-12">
       <div className="grid lg:grid-cols-4 gap-8 items-center w-full mb-8 max-sm:mb-4">
         <div className="lg:col-span-2">
           <div className="border-b border-dashed border-sky-50/30 pb-8 max-sm:pb-4 mb-8 max-sm:mb-0">
@@ -113,7 +113,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="w-full h-fit py-2 text-center absolute bottom-0 left-0 bg-foreground">
+      <div className="w-full h-fit py-2 text-center absolute bottom-0 left-0 bg-neutral-900 italic">
         Saif Anees
       </div>
     </div>
